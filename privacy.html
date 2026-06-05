@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for CyberG7 Technologies. Learn how we collect, use, and protect your personal data in compliance with Singapore's PDPA.">
+  <meta name="keywords" content="CyberG7 privacy policy, data protection Singapore, PDPA compliance, personal data protection, CyberG7 Technologies">
+  <meta name="author" content="CyberG7 Technologies">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0b10">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy | CyberG7 Technologies">
+  <meta property="og:description" content="Learn how CyberG7 Technologies collects, uses, and protects your personal data in compliance with Singapore's PDPA.">
+  <meta property="og:url" content="https://cyberg7.com/privacy">
+  <meta property="og:site_name" content="CyberG7 Technologies">
+  <meta property="og:locale" content="en_SG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy Policy | CyberG7 Technologies">
+  <meta name="twitter:description" content="Learn how CyberG7 Technologies collects, uses, and protects your personal data in compliance with Singapore's PDPA.">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194187704"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'AW-18194187704');
+</script>
+  
+  <title>Privacy Policy | CyberG7 Technologies</title>
+
+  <link rel="canonical" href="https://cyberg7.com/privacy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0a0b10;
+      --bg-surface: #111320;
+      --bg-card: #161829;
+      --bg-card-hover: #1c1f35;
+      --accent: #6c5ce7;
+      --accent-light: #86EFAC;
+      --accent-bright: #8b7cf7;
+      --accent-glow: rgba(108, 92, 231, 0.3);
+      --green: #00cec9;
+      --green-glow: rgba(0, 206, 201, 0.2);
+      --pink: #fd79a8;
+      --orange: #fdcb6e;
+      --blue: #74b9ff;
+      --text-primary: #eef0f6;
+      --text-secondary: #9a9db5;
+      --text-muted: #5f627a;
+      --border: rgba(255,255,255,0.05);
+      --border-hover: rgba(108,92,231,0.25);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --nav-height: 72px;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+
+    body {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Noise Overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Grid Background */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(108,92,231,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108,92,231,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+    /* Utility */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 2; }
+    .text-center { text-align: center; }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ========== NAVIGATION ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      z-index: 1000;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(10, 11, 16, 0.92);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+   .nav-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+    .nav-links a.active-link {
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6) !important;
+      color: #fff !important;
+      padding: 10px 24px !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      box-shadow: 0 2px 16px var(--accent-glow);
+      transition: all 0.3s cubic-bezier(0.22,1,0.36,1) !important;
+    }
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 24px var(--accent-glow) !important;
+      background: linear-gradient(135deg, var(--accent-bright), #9b6cf6) !important;
+    }
+
+    /* ========== SHINY BUTTON ========== */
+    @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @property --gradient-angle-offset {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @property --gradient-percent {
+      syntax: "<percentage>";
+      initial-value: 5%;
+      inherits: false;
+    }
+    @property --gradient-shine {
+      syntax: "<color>";
+      initial-value: white;
+      inherits: false;
+    }
+
+    .shiny-cta {
+      --shiny-cta-bg: #000000;
+      --shiny-cta-bg-subtle: #1a1818;
+      --shiny-cta-fg: #ffffff;
+      --shiny-cta-highlight: #6c5ce7;
+      --shiny-cta-highlight-subtle: #a29bfe;
+      --animation: gradient-angle linear infinite;
+      --duration: 3s;
+      --shadow-size: 2px;
+      --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+      isolation: isolate;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      outline-offset: 4px;
+      padding: 1rem 2rem;
+      font-family: "Outfit", sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      font-weight: 600;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      color: var(--shiny-cta-fg);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #745EEB, #00b8e6) padding-box,
+        conic-gradient(
+          from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+          transparent,
+          var(--shiny-cta-highlight) var(--gradient-percent),
+          var(--gradient-shine) calc(var(--gradient-percent) * 2),
+          var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+          transparent calc(var(--gradient-percent) * 4)
+        ) border-box;
+      box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+      transition: var(--transition);
+      transition-property: --gradient-angle-offset, --gradient-percent, --gradient-shine;
+    }
+    .shiny-cta::before,
+    .shiny-cta::after,
+    .shiny-cta span::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+    }
+    .shiny-cta:active { translate: 0 1px; }
+    .shiny-cta::before {
+      --size: calc(100% - var(--shadow-size) * 3);
+      --position: 2px;
+      --space: calc(var(--position) * 2);
+      width: var(--size);
+      height: var(--size);
+      background: radial-gradient(circle at var(--position) var(--position), white calc(var(--position) / 4), transparent 0) padding-box;
+      background-size: var(--space) var(--space);
+      background-repeat: space;
+      mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg), black, transparent 10% 90%, black);
+      border-radius: inherit;
+      opacity: 0.4;
+      z-index: -1;
+    }
+    .shiny-cta::after {
+      --animation: shimmer linear infinite;
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(-50deg, transparent, var(--shiny-cta-highlight), transparent);
+      mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+      opacity: 0.6;
+    }
+    .shiny-cta span { z-index: 1; }
+    .shiny-cta span::before {
+      --size: calc(100% + 1rem);
+      width: var(--size);
+      height: var(--size);
+      box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+      opacity: 0;
+      transition: opacity var(--transition);
+      animation: calc(var(--duration) * 1.5) breathe linear infinite;
+    }
+    .shiny-cta,
+    .shiny-cta::before,
+    .shiny-cta::after {
+      animation: var(--animation) var(--duration), var(--animation) calc(var(--duration) / 0.4) reverse paused;
+      animation-composition: add;
+    }
+    .shiny-cta:is(:hover, :focus-visible) {
+      --gradient-percent: 20%;
+      --gradient-angle-offset: 95deg;
+      --gradient-shine: var(--shiny-cta-highlight-subtle);
+    }
+    .shiny-cta:is(:hover, :focus-visible),
+    .shiny-cta:is(:hover, :focus-visible)::before,
+    .shiny-cta:is(:hover, :focus-visible)::after {
+      animation-play-state: running;
+    }
+    .shiny-cta:is(:hover, :focus-visible) span::before { opacity: 1; }
+    @keyframes gradient-angle { to { --gradient-angle: 360deg; } }
+    @keyframes shimmer { to { rotate: 360deg; } }
+    @keyframes breathe { from, to { scale: 1; } 50% { scale: 1.2; } }
+    .shiny-cta-nav {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.88rem;
+      border-radius: 10px;
+      color: #ffffff !important;
+    }
+
+    .shiny-cta-hero {
+      --shiny-cta-highlight: #4ade80;
+      --shiny-cta-highlight-subtle: #86efac;
+      --shiny-cta-bg-subtle: rgba(20, 83, 45, 0.55);
+      background: linear-gradient(135deg, #16A34A, #22C55E) padding-box,
+        conic-gradient(
+          from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+          transparent,
+          var(--shiny-cta-highlight) var(--gradient-percent),
+          var(--gradient-shine) calc(var(--gradient-percent) * 2),
+          var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+          transparent calc(var(--gradient-percent) * 4)
+        ) border-box;
+      color: #ECFDF5;
+      border-radius: 12px;
+      box-shadow:
+        0 8px 20px rgba(34, 197, 94, 0.25),
+        0 0 15px rgba(34, 197, 94, 0.2),
+        inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+    }
+    .shiny-cta.shiny-cta-hero.shiny-cta-nav {
+      color: #ECFDF5 !important;
+    }
+    .shiny-cta.shiny-cta-hero::after {
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0) 40%
+      );
+    }
+    .shiny-cta.shiny-cta-hero::before {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      translate: 0 0;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0) 40%
+      );
+      background-size: auto;
+      background-repeat: no-repeat;
+      mask-image: none;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 0;
+      animation: none;
+    }
+    .shiny-cta.shiny-cta-hero:is(:hover, :focus-visible)::before {
+      opacity: 1;
+    }
+
+    /* ===== FOOTER CTA BANNER ===== */
+    .footer-cta-banner {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 20px 68px;
+      background:
+        radial-gradient(circle at 50% 62%, rgba(34, 197, 94, 0.12), transparent 28%),
+        radial-gradient(circle at 78% 22%, rgba(45, 212, 191, 0.08), transparent 22%),
+        linear-gradient(180deg, #05070b 0%, #08101a 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-cta-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .footer-cta-banner::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      transform: translateX(-50%);
+      width: min(720px, 88%);
+      height: 110px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(34, 197, 94, 0.16) 0%,
+        rgba(45, 212, 191, 0.09) 30%,
+        rgba(0, 0, 0, 0) 72%
+      );
+      filter: blur(18px);
+      pointer-events: none;
+    }
+
+    .footer-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-cta-banner h2 {
+      margin: 0;
+      color: #f8fafc;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+      text-wrap: balance;
+      font-size: clamp(2rem, 4.8vw, 4rem);
+    }
+
+    .footer-cta-banner h2 span {
+      display: block;
+      margin-top: 6px;
+      background: linear-gradient(90deg, #22C55E, #2DD4BF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 8px rgba(45, 212, 191, 0.14);
+    }
+
+    @media (max-width: 900px) {
+      .footer-cta-banner {
+        padding: 60px 18px 58px;
+      }
+
+      .footer-cta-banner::before {
+        background-size: 56px 56px;
+      }
+
+      .footer-cta-banner::after {
+        width: min(560px, 90%);
+        height: 90px;
+        bottom: -28px;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: clamp(1.9rem, 6vw, 3rem);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-cta-banner {
+        padding: 48px 16px 46px;
+      }
+
+      .footer-cta-banner::before {
+        background-size: 40px 40px;
+        opacity: 0.32;
+      }
+
+      .footer-cta-banner::after {
+        width: 92%;
+        height: 68px;
+        bottom: -18px;
+        filter: blur(14px);
+      }
+
+      .footer-cta-inner {
+        max-width: 100%;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: clamp(1.7rem, 8vw, 2.3rem);
+        line-height: 1.06;
+        letter-spacing: -0.03em;
+      }
+
+      .footer-cta-banner h2 span {
+        margin-top: 4px;
+        text-shadow: 0 0 6px rgba(45, 212, 191, 0.12);
+      }
+    }
+
+    @media (max-width: 380px) {
+      .footer-cta-banner {
+        padding: 42px 14px 40px;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: 1.55rem;
+      }
+
+      .footer-cta-banner::after {
+        height: 56px;
+      }
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ========== TYPOGRAPHY ========== */
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--accent-light);
+    }
+    .section-label.centered::before,
+    .section-label.centered::after { display: none; }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 28px;
+      line-height: 1.85;
+      font-weight: 400;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #22C55E, #22D3EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      color: #fff;
+      box-shadow: 0 4px 24px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      backdrop-filter: blur(8px);
+      box-shadow: none;
+    }
+    .btn-outline:hover {
+      border-color: rgba(34, 197, 94, 0.65);
+      color: #ffffff;
+      background: rgba(34, 197, 94, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* ========== SECTIONS ========== */
+    section { padding: 110px 0; position: relative; }
+    .section-alt { background: var(--bg-surface); }
+
+    /* ========== DECORATIVE ========== */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-purple { background: radial-gradient(circle, rgba(108,92,231,0.2), transparent 70%); }
+    .orb-green { background: radial-gradient(circle, rgba(0,206,201,0.12), transparent 70%); }
+    .orb-pink { background: radial-gradient(circle, rgba(253,121,168,0.1), transparent 70%); }
+
+    /* ========== LEGAL PAGE HERO ========== */
+    .legal-hero {
+      padding: 160px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero .orb-1 { width: 600px; height: 600px; top: -250px; left: 50%; transform: translateX(-50%); }
+    .legal-hero .orb-2 { width: 300px; height: 300px; bottom: -80px; right: -100px; }
+
+    .legal-hero h1 {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+    }
+    .legal-hero .lead {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+    }
+    .legal-hero .hero-badge {
+      animation: fadeIn 0.6s ease;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 22px;
+      border-radius: 100px;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #D1FAE5;
+      margin-bottom: 28px;
+    }
+    .hero-badge .pulse {
+      width: 7px; height: 7px;
+      background: #22C55E;
+      border-radius: 50%;
+      animation: pulse-glow 2s ease infinite;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.55);
+    }
+
+    /* ========== LEGAL CONTENT LAYOUT ========== */
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    /* Table of Contents Sidebar */
+    .toc-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 28px);
+      align-self: start;
+      max-height: calc(100vh - var(--nav-height) - 56px);
+      overflow-y: auto;
+    }
+    .toc-sidebar h4 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .toc-sidebar ul {
+      list-style: none;
+    }
+    .toc-sidebar ul li {
+      margin-bottom: 4px;
+    }
+    .toc-sidebar ul a {
+      display: block;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border-left: 2px solid transparent;
+      transition: all 0.3s;
+      line-height: 1.4;
+    }
+    .toc-sidebar ul a:hover {
+      color: var(--accent-light);
+      background: rgba(108,92,231,0.05);
+      border-left-color: var(--accent-light);
+    }
+    .toc-sidebar ul a.active {
+      color: var(--accent-light);
+      background: rgba(108,92,231,0.08);
+      border-left-color: var(--accent-light);
+      font-weight: 600;
+    }
+
+    /* Legal Content Area */
+    .legal-content {
+      max-width: 720px;
+    }
+    .legal-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 44px;
+      margin-bottom: 24px;
+      transition: border-color 0.3s;
+    }
+    .legal-section:hover {
+      border-color: var(--border-hover);
+    }
+    .legal-section h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .legal-section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .legal-section p {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+    .legal-section ul, .legal-section ol {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .legal-section ul li, .legal-section ol li {
+      margin-bottom: 8px;
+    }
+    .legal-section a {
+      color: var(--accent-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .legal-section a:hover {
+      color: var(--green);
+    }
+    .legal-section strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ========== RELATED LINKS ========== */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .related-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .related-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+    }
+    .related-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .related-card.card-purple::before { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+    .related-card.card-green::before { background: linear-gradient(90deg, var(--green), rgba(0,206,201,0.4)); }
+    .related-card.card-blue::before { background: linear-gradient(90deg, var(--blue), rgba(116,185,255,0.4)); }
+    .related-card .related-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+    }
+    .ri-purple { background: rgba(108,92,231,0.1); color: var(--accent-light); }
+    .ri-green { background: rgba(0,206,201,0.08); color: var(--green); }
+    .ri-blue { background: rgba(116,185,255,0.08); color: var(--blue); }
+    .related-card h3 {
+      color: var(--text-primary);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .related-card p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .related-card .card-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-light);
+      transition: gap 0.3s;
+    }
+    .related-card:hover .card-arrow {
+      gap: 10px;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 2;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 72px 0 48px;
+    }
+    .footer-brand p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.78rem;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    .footer-col ul a:hover { color: var(--accent-light); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom a {
+      color: var(--accent-light);
+      text-decoration: none;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover {
+      border-color: var(--accent-light);
+      color: var(--accent-light);
+      background: rgba(108,92,231,0.06);
+    }
+
+    /* ========== BACK TO TOP ========== */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+      backdrop-filter: blur(12px);
+      font-size: 1.1rem;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .toc-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+      }
+      .toc-sidebar ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+      }
+      .related-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 80px 0; }
+      .legal-hero { padding: 130px 0 60px; }
+      .legal-section { padding: 28px 24px; }
+      .nav-links { display: none; }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10,11,16,0.97);
+        backdrop-filter: blur(20px);
+        padding: 32px 28px;
+        gap: 4px;
+        align-items: stretch;
+        animation: fadeIn 0.3s ease;
+        z-index: 999;
+      }
+      .nav-links.active a {
+        padding: 16px 20px;
+        font-size: 1.05rem;
+        border-radius: 12px;
+      }
+      .nav-links.active .nav-cta {
+        margin-top: 12px;
+        text-align: center;
+        justify-content: center;
+      }
+      .menu-toggle { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .toc-sidebar ul { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="CyberG7 Technologies Home">
+  <img src="https://assets.cdn.filesafe.space/2rFW4hcKsbFWqLW3Dkmj/media/69ae2a1014ebc328fb5c8e25.png" class="nav-logo-img" alt="CyberG7 Logo">
+  CyberG7
+</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/pdpa">PDPA</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="https://launchnow.cyberg7.com.sg/intake" class="shiny-cta shiny-cta-hero shiny-cta-nav"><span>Get Started</span></a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="legal-hero">
+    <div class="orb orb-purple orb-1"></div>
+    <div class="orb orb-green orb-2"></div>
+    <div class="container">
+      <div class="hero-badge"><span class="pulse"></span> Legal</div>
+      <h1>Privacy <span class="gradient-text">Policy</span></h1>
+      <p class="lead">Last updated: 19 March 2026</p>
+    </div>
+  </section>
+
+  <!-- ===== LEGAL CONTENT ===== -->
+  <section class="section-alt" style="padding-top: 60px;">
+    <div class="container">
+      <div class="legal-layout">
+
+        <!-- Table of Contents -->
+        <aside class="toc-sidebar reveal">
+          <h4>Contents</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#info-collect">Information We Collect</a></li>
+            <li><a href="#how-use">How We Use Your Information</a></li>
+            <li><a href="#data-sharing">Data Sharing &amp; Disclosure</a></li>
+            <li><a href="#data-retention">Data Retention</a></li>
+            <li><a href="#your-rights">Your Rights</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#third-party">Third-Party Links</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </aside>
+
+        <!-- Content -->
+        <div class="legal-content">
+
+          <div class="legal-section reveal" id="introduction">
+            <h2>1. Introduction</h2>
+            <p>CyberG7 Technologies ("CyberG7", "we", "our", or "us") is a Singapore-registered web design and technology company. We are committed to protecting the privacy and personal data of our clients, website visitors, and any individuals who interact with our services.</p>
+            <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you visit our website at cyberg7.com, engage our services, or otherwise communicate with us. This policy is designed to comply with the Personal Data Protection Act 2012 (PDPA) of Singapore and other applicable data protection regulations.</p>
+            <p>By using our website or engaging our services, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy. If you do not agree with any part of this policy, please discontinue use of our website and services.</p>
+          </div>
+
+          <div class="legal-section reveal" id="info-collect">
+            <h2>2. Information We Collect</h2>
+            <p>We collect various types of information to provide and improve our services to you. The types of data we collect include:</p>
+
+            <h3>2.1 Personal Information You Provide</h3>
+            <p>When you engage our services, fill out a contact form, or communicate with us, you may provide us with the following personal data:</p>
+            <ul>
+              <li><strong>Name</strong> &mdash; your full name or business representative's name</li>
+              <li><strong>Email address</strong> &mdash; for project communications and service delivery</li>
+              <li><strong>Phone number</strong> &mdash; for direct communication regarding your project</li>
+              <li><strong>Company or business name</strong> &mdash; to identify your organisation and tailor our services</li>
+              <li><strong>Business address</strong> &mdash; where relevant for invoicing or project requirements</li>
+              <li><strong>Project requirements and content</strong> &mdash; text, images, and other materials you provide for your website build</li>
+            </ul>
+
+            <h3>2.2 Usage Data</h3>
+            <p>When you visit our website, we may automatically collect certain technical information, including:</p>
+            <ul>
+              <li><strong>IP address</strong> &mdash; your internet protocol address used to connect to the internet</li>
+              <li><strong>Browser type and version</strong> &mdash; the web browser you are using</li>
+              <li><strong>Operating system</strong> &mdash; your device's operating system</li>
+              <li><strong>Pages visited and navigation path</strong> &mdash; which pages you view and how you navigate through our site</li>
+              <li><strong>Time and date of visit</strong> &mdash; when you access our website</li>
+              <li><strong>Referring website</strong> &mdash; the site that directed you to ours</li>
+              <li><strong>Time spent on pages</strong> &mdash; duration of your visit on each page</li>
+            </ul>
+          </div>
+
+          <div class="legal-section reveal" id="how-use">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the personal data we collect for the following purposes:</p>
+
+            <h3>3.1 Providing Our Services</h3>
+            <ul>
+              <li>To design, develop, and deliver your website as per your project brief</li>
+              <li>To set up and manage hosting services on your behalf</li>
+              <li>To process payments and manage billing</li>
+              <li>To provide technical support and maintenance for your website</li>
+            </ul>
+
+            <h3>3.2 Communication</h3>
+            <ul>
+              <li>To respond to your enquiries, requests, and feedback</li>
+              <li>To send you project updates and milestone notifications</li>
+              <li>To provide information about service changes or updates that may affect you</li>
+              <li>To send you marketing communications, where you have consented to receive them</li>
+            </ul>
+
+            <h3>3.3 Improving Our Services</h3>
+            <ul>
+              <li>To analyse how visitors use our website and identify areas for improvement</li>
+              <li>To develop new features, services, and offerings</li>
+              <li>To conduct internal research and analytics</li>
+            </ul>
+
+            <h3>3.4 Legal Compliance</h3>
+            <ul>
+              <li>To comply with applicable laws, regulations, and legal processes in Singapore</li>
+              <li>To enforce our Terms of Service and protect our legal rights</li>
+              <li>To prevent fraud, security threats, and other unlawful activities</li>
+            </ul>
+          </div>
+
+          <div class="legal-section reveal" id="data-sharing">
+            <h2>4. Data Sharing &amp; Disclosure</h2>
+            <p><strong>We do not sell, rent, or trade your personal data to third parties for marketing purposes.</strong></p>
+            <p>We may share your personal data in the following limited circumstances:</p>
+
+            <h3>4.1 Service Providers</h3>
+            <p>We may share your data with trusted third-party service providers who assist us in operating our business and delivering services to you. These include:</p>
+            <ul>
+              <li><strong>Hosting providers</strong> &mdash; to host and maintain your website</li>
+              <li><strong>Analytics services</strong> &mdash; to help us understand website usage and improve user experience</li>
+              <li><strong>Payment processors</strong> &mdash; to securely process your payments</li>
+              <li><strong>Communication tools</strong> &mdash; for email delivery and customer support</li>
+            </ul>
+            <p>All service providers are contractually obligated to protect your data and use it only for the purposes we specify.</p>
+
+            <h3>4.2 Legal Requirements</h3>
+            <p>We may disclose your personal data if required to do so by law, regulation, or in response to valid requests by public authorities, including compliance with a court order, subpoena, or similar legal process under Singapore law.</p>
+
+            <h3>4.3 Business Transfers</h3>
+            <p>In the event of a merger, acquisition, reorganisation, or sale of assets, your personal data may be transferred as part of that transaction. We will notify you of any such change and any choices you may have regarding your personal data.</p>
+          </div>
+
+          <div class="legal-section reveal" id="data-retention">
+            <h2>5. Data Retention</h2>
+            <p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected, including:</p>
+            <ul>
+              <li><strong>Active client data</strong> &mdash; retained for the duration of our business relationship and the period during which we provide services to you</li>
+              <li><strong>Project files and content</strong> &mdash; retained for up to 12 months after project completion, unless you request earlier deletion</li>
+              <li><strong>Billing and payment records</strong> &mdash; retained for up to 7 years to comply with Singapore tax and accounting regulations</li>
+              <li><strong>Website analytics data</strong> &mdash; retained in anonymised or aggregated form for up to 26 months</li>
+              <li><strong>Communication records</strong> &mdash; retained for up to 24 months after the last interaction</li>
+            </ul>
+            <p>When personal data is no longer required, we will securely delete or anonymise it in accordance with our data retention procedures.</p>
+          </div>
+
+          <div class="legal-section reveal" id="your-rights">
+            <h2>6. Your Rights</h2>
+            <p>Under the Personal Data Protection Act 2012 (PDPA) of Singapore, you have the following rights in relation to your personal data:</p>
+
+            <h3>6.1 Right of Access</h3>
+            <p>You have the right to request access to the personal data we hold about you. Upon receiving a valid request, we will provide you with a copy of your personal data within a reasonable timeframe, typically within 30 business days.</p>
+
+            <h3>6.2 Right of Correction</h3>
+            <p>You have the right to request that we correct any inaccurate or incomplete personal data we hold about you. We will make the necessary corrections promptly and, where applicable, inform any third parties to whom the data was previously disclosed.</p>
+
+            <h3>6.3 Right of Withdrawal of Consent</h3>
+            <p>You may withdraw your consent for us to collect, use, or disclose your personal data at any time by contacting us. Please note that withdrawal of consent may affect our ability to provide certain services to you. We will inform you of the likely consequences of withdrawing your consent.</p>
+
+            <h3>6.4 Right to Data Portability</h3>
+            <p>Where technically feasible, you may request that we transfer your personal data to another organisation in a commonly used, machine-readable format.</p>
+
+            <h3>6.5 Exercising Your Rights</h3>
+            <p>To exercise any of these rights, please contact us at <a href="mailto:sales@cyberg7.com.sg">sales@cyberg7.com.sg</a>. We may request proof of identity before processing your request to ensure the security of your personal data.</p>
+          </div>
+
+          <div class="legal-section reveal" id="data-security">
+            <h2>7. Data Security</h2>
+            <p>We take the security of your personal data seriously and implement appropriate technical and organisational measures to protect it against unauthorised access, alteration, disclosure, or destruction. Our security measures include:</p>
+            <ul>
+              <li><strong>Encryption</strong> &mdash; data transmitted between your browser and our website is protected using SSL/TLS encryption (HTTPS)</li>
+              <li><strong>Secure servers</strong> &mdash; your data is stored on secure servers with industry-standard protection measures</li>
+              <li><strong>Access controls</strong> &mdash; only authorised personnel with a legitimate business need can access your personal data</li>
+              <li><strong>Regular security reviews</strong> &mdash; we conduct periodic reviews of our data collection, storage, and processing practices</li>
+              <li><strong>Employee training</strong> &mdash; our team is trained on data protection best practices and privacy obligations</li>
+            </ul>
+            <p>While we strive to protect your personal data, no method of transmission over the internet or electronic storage is completely secure. We cannot guarantee absolute security, but we are committed to taking all reasonable steps to safeguard your information.</p>
+          </div>
+
+          <div class="legal-section reveal" id="third-party">
+            <h2>8. Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites, services, or applications that are not operated or controlled by CyberG7 Technologies. This Privacy Policy applies solely to information collected by our website and services.</p>
+            <p>We are not responsible for the privacy practices of third-party websites. We encourage you to review the privacy policies of any third-party sites you visit. The inclusion of a link on our website does not imply endorsement of the linked site or their practices.</p>
+          </div>
+
+          <div class="legal-section reveal" id="children">
+            <h2>9. Children's Privacy</h2>
+            <p>Our website and services are not directed at individuals under the age of 18. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected personal data from a child under 18, we will take immediate steps to delete that information from our records.</p>
+            <p>If you are a parent or guardian and believe that your child has provided us with personal data, please contact us at <a href="mailto:sales@cyberg7.com.sg">sales@cyberg7.com.sg</a> so that we can take appropriate action.</p>
+          </div>
+
+          <div class="legal-section reveal" id="changes">
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes to this policy, we will:</p>
+            <ul>
+              <li>Update the "Last updated" date at the top of this page</li>
+              <li>Post the revised policy on our website</li>
+              <li>Where appropriate, notify you via email or through a prominent notice on our website</li>
+            </ul>
+            <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your data. Your continued use of our website and services after any changes to this policy constitutes your acceptance of the updated terms.</p>
+          </div>
+
+          <div class="legal-section reveal" id="contact-us">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please do not hesitate to contact us:</p>
+            <p><strong>CyberG7 Technologies</strong><br>
+            Email: <a href="mailto:sales@cyberg7.com.sg">sales@cyberg7.com.sg</a><br>
+            Location: Singapore</p>
+            <p>We aim to respond to all enquiries within 5 business days. If you are not satisfied with our response, you may lodge a complaint with the Personal Data Protection Commission (PDPC) of Singapore at <a href="https://www.pdpc.gov.sg" target="_blank" rel="noopener noreferrer">www.pdpc.gov.sg</a>.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA BANNER ===== -->
+  <section class="footer-cta-banner">
+    <div class="footer-cta-inner">
+      <h2>
+        From Idea to Website
+        <span>in Just 7 Days</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" style="margin-bottom:4px;">
+  <img src="https://assets.cdn.filesafe.space/2rFW4hcKsbFWqLW3Dkmj/media/69ae2a1014ebc328fb5c8e25.png" 
+       alt="CyberG7 Logo" 
+       class="nav-logo-img">
+  CyberG7
+</a>
+          <p>Professional websites for Singapore startups and SMEs. Go live in 7 days for just S$288. ACRA registered, SME Centre supported.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#features">Phase 1 Website</a></li>
+            <li><a href="/#pricing">Phase 2 Growth</a></li>
+            <li><a href="/#showcase">Portfolio</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/pdpa">PDPA Notice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CyberG7 Technologies. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/cyberg7/" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/cyberg7technologies/" aria-label="Facebook">fb</a>
+          <a href="https://www.instagram.com/cyber.g7/" aria-label="Instagram">ig</a>
+          <a href="https://x.com/cyberg7digital" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ===== Scroll Reveal =====
+      const reveals = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => revealObserver.observe(el));
+
+      // ===== Navbar Scroll =====
+      const navbar = document.querySelector('.navbar');
+      const backToTop = document.getElementById('backToTop');
+      let navTicking = false;
+
+      window.addEventListener('scroll', () => {
+        if (!navTicking) {
+          requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            navbar.classList.toggle('scrolled', scrollY > 60);
+            backToTop.classList.toggle('visible', scrollY > 600);
+
+            // Parallax on orbs
+            document.querySelectorAll('.orb').forEach((orb, i) => {
+              const speed = 0.03 + (i * 0.01);
+              orb.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+
+            navTicking = false;
+          });
+          navTicking = true;
+        }
+      });
+
+      // ===== Back to Top =====
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ===== Mobile Menu =====
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Close mobile menu on link click
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ===== TOC Active State =====
+      const tocLinks = document.querySelectorAll('.toc-sidebar a');
+      const legalSections = document.querySelectorAll('.legal-section[id]');
+
+      const tocObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.toc-sidebar a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      }, { threshold: 0.2, rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'))}px 0px -60% 0px` });
+
+      legalSections.forEach(section => tocObserver.observe(section));
+
+      // ===== Smooth link scrolling =====
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

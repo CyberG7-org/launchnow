@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About CyberG7 Technologies — Singapore's trusted web design partner for startups and SMEs. ACRA registered, delivering professional websites in 7 days from just S$288.">
+  <meta name="keywords" content="CyberG7 about, Singapore web design company, ACRA registered web agency, affordable web design Singapore, SME website partner, startup web design team">
+  <meta name="author" content="CyberG7 Technologies">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0b10">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | CyberG7 Technologies">
+  <meta property="og:description" content="Meet the team behind Singapore's most affordable professional web design service. ACRA registered, 3,000+ SMEs launched.">
+  <meta property="og:url" content="https://cyberg7.com/about">
+  <meta property="og:site_name" content="CyberG7 Technologies">
+  <meta property="og:locale" content="en_SG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | CyberG7 Technologies">
+  <meta name="twitter:description" content="Meet the team behind Singapore's most affordable professional web design service.">
+
+  <title>About Us | CyberG7 Technologies</title>
+
+  <link rel="canonical" href="https://cyberg7.com/about">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194187704"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'AW-18194187704');
+</script>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About CyberG7 Technologies",
+    "description": "Learn about CyberG7 Technologies, Singapore's trusted web design partner for startups and SMEs.",
+    "url": "https://cyberg7.com/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CyberG7 Technologies",
+      "url": "https://cyberg7.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Singapore"
+      },
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Singapore"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0a0b10;
+      --bg-surface: #111320;
+      --bg-card: #161829;
+      --bg-card-hover: #1c1f35;
+      --accent: #6c5ce7;
+      --accent-light: #86EFAC;
+      --accent-bright: #8b7cf7;
+      --accent-glow: rgba(108, 92, 231, 0.3);
+      --green: #00cec9;
+      --green-glow: rgba(0, 206, 201, 0.2);
+      --pink: #fd79a8;
+      --orange: #fdcb6e;
+      --blue: #74b9ff;
+      --text-primary: #eef0f6;
+      --text-secondary: #9a9db5;
+      --text-muted: #5f627a;
+      --border: rgba(255,255,255,0.05);
+      --border-hover: rgba(108,92,231,0.25);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --nav-height: 72px;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+
+    body {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Noise Overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Grid Background */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(108,92,231,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108,92,231,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+    /* Utility */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 2; }
+    .text-center { text-align: center; }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes slideRight {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes borderGlow {
+      0%, 100% { border-color: rgba(108,92,231,0.15); }
+      50% { border-color: rgba(108,92,231,0.4); }
+    }
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ========== NAVIGATION ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      z-index: 1000;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(10, 11, 16, 0.92);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+   .nav-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+    .nav-links a.active-link {
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6) !important;
+      color: #fff !important;
+      padding: 10px 24px !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      box-shadow: 0 2px 16px var(--accent-glow);
+      transition: all 0.3s cubic-bezier(0.22,1,0.36,1) !important;
+    }
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 24px var(--accent-glow) !important;
+      background: linear-gradient(135deg, var(--accent-bright), #9b6cf6) !important;
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ========== TYPOGRAPHY ========== */
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--accent-light);
+    }
+    .section-label.centered::before,
+    .section-label.centered::after { display: none; }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 28px;
+      line-height: 1.85;
+      font-weight: 400;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #22C55E, #22D3EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      color: #fff;
+      box-shadow: 0 4px 24px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      backdrop-filter: blur(8px);
+      box-shadow: none;
+    }
+    .btn-outline:hover {
+      border-color: rgba(34, 197, 94, 0.65);
+      color: #ffffff;
+      background: rgba(34, 197, 94, 0.08);
+      transform: translateY(-2px);
+    }
+    .btn-group { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
+
+    /* ========== SHINY BUTTON ========== */
+    @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @property --gradient-angle-offset {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @property --gradient-percent {
+      syntax: "<percentage>";
+      initial-value: 5%;
+      inherits: false;
+    }
+    @property --gradient-shine {
+      syntax: "<color>";
+      initial-value: white;
+      inherits: false;
+    }
+
+    .shiny-cta {
+      --shiny-cta-bg: #000000;
+      --shiny-cta-bg-subtle: #1a1818;
+      --shiny-cta-fg: #ffffff;
+      --shiny-cta-highlight: #6c5ce7;
+      --shiny-cta-highlight-subtle: #a29bfe;
+      --animation: gradient-angle linear infinite;
+      --duration: 3s;
+      --shadow-size: 2px;
+      --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+      
+      isolation: isolate;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      outline-offset: 4px;
+      padding: 1rem 2rem;
+      font-family: "Outfit", sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      font-weight: 600;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      color: var(--shiny-cta-fg);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #745EEB, #00b8e6) padding-box,
+        conic-gradient(
+          from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+          transparent,
+          var(--shiny-cta-highlight) var(--gradient-percent),
+          var(--gradient-shine) calc(var(--gradient-percent) * 2),
+          var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+          transparent calc(var(--gradient-percent) * 4)
+        ) border-box;
+      box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+      transition: var(--transition);
+      transition-property: --gradient-angle-offset, --gradient-percent, --gradient-shine;
+    }
+
+    .shiny-cta::before,
+    .shiny-cta::after,
+    .shiny-cta span::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+    }
+
+    .shiny-cta:active {
+      translate: 0 1px;
+    }
+
+    .shiny-cta::before {
+      --size: calc(100% - var(--shadow-size) * 3);
+      --position: 2px;
+      --space: calc(var(--position) * 2);
+      width: var(--size);
+      height: var(--size);
+      background: radial-gradient(
+        circle at var(--position) var(--position),
+        white calc(var(--position) / 4),
+        transparent 0
+      ) padding-box;
+      background-size: var(--space) var(--space);
+      background-repeat: space;
+      mask-image: conic-gradient(
+        from calc(var(--gradient-angle) + 45deg),
+        black,
+        transparent 10% 90%,
+        black
+      );
+      border-radius: inherit;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .shiny-cta::after {
+      --animation: shimmer linear infinite;
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(
+        -50deg,
+        transparent,
+        var(--shiny-cta-highlight),
+        transparent
+      );
+      mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+      opacity: 0.6;
+    }
+
+    .shiny-cta span {
+      z-index: 1;
+    }
+
+    .shiny-cta span::before {
+      --size: calc(100% + 1rem);
+      width: var(--size);
+      height: var(--size);
+      box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+      opacity: 0;
+      transition: opacity var(--transition);
+      animation: calc(var(--duration) * 1.5) breathe linear infinite;
+    }
+
+    .shiny-cta,
+    .shiny-cta::before,
+    .shiny-cta::after {
+      animation: var(--animation) var(--duration),
+        var(--animation) calc(var(--duration) / 0.4) reverse paused;
+      animation-composition: add;
+    }
+
+    .shiny-cta:is(:hover, :focus-visible) {
+      --gradient-percent: 20%;
+      --gradient-angle-offset: 95deg;
+      --gradient-shine: var(--shiny-cta-highlight-subtle);
+    }
+
+    .shiny-cta:is(:hover, :focus-visible),
+    .shiny-cta:is(:hover, :focus-visible)::before,
+    .shiny-cta:is(:hover, :focus-visible)::after {
+      animation-play-state: running;
+    }
+
+    .shiny-cta:is(:hover, :focus-visible) span::before {
+      opacity: 1;
+    }
+
+    @keyframes gradient-angle {
+      to {
+        --gradient-angle: 360deg;
+      }
+    }
+
+    @keyframes shimmer {
+      to {
+        rotate: 360deg;
+      }
+    }
+
+    @keyframes breathe {
+      from, to {
+        scale: 1;
+      }
+      50% {
+        scale: 1.2;
+      }
+    }
+
+    .shiny-cta-nav {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.88rem;
+      border-radius: 10px;
+      color: #ffffff !important;
+    }
+
+    .shiny-cta-hero {
+      --shiny-cta-highlight: #4ade80;
+      --shiny-cta-highlight-subtle: #86efac;
+      --shiny-cta-bg-subtle: rgba(20, 83, 45, 0.55);
+      background: linear-gradient(135deg, #16A34A, #22C55E) padding-box,
+        conic-gradient(
+          from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+          transparent,
+          var(--shiny-cta-highlight) var(--gradient-percent),
+          var(--gradient-shine) calc(var(--gradient-percent) * 2),
+          var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+          transparent calc(var(--gradient-percent) * 4)
+        ) border-box;
+      color: #ECFDF5;
+      border-radius: 12px;
+      box-shadow:
+        0 8px 20px rgba(34, 197, 94, 0.25),
+        0 0 15px rgba(34, 197, 94, 0.2),
+        inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+    }
+    .shiny-cta.shiny-cta-hero.shiny-cta-nav {
+      color: #ECFDF5 !important;
+    }
+    .shiny-cta.shiny-cta-hero::after {
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0) 40%
+      );
+    }
+    .shiny-cta.shiny-cta-hero::before {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      translate: 0 0;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0) 40%
+      );
+      background-size: auto;
+      background-repeat: no-repeat;
+      mask-image: none;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 0;
+      animation: none;
+    }
+    .shiny-cta.shiny-cta-hero:is(:hover, :focus-visible)::before {
+      opacity: 1;
+    }
+
+    /* ========== SECTIONS ========== */
+    section { padding: 110px 0; position: relative; }
+    .section-alt { background: var(--bg-surface); }
+
+    /* ========== DECORATIVE ========== */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-purple { background: radial-gradient(circle, rgba(108,92,231,0.2), transparent 70%); }
+    .orb-green { background: radial-gradient(circle, rgba(0,206,201,0.12), transparent 70%); }
+    .orb-pink { background: radial-gradient(circle, rgba(253,121,168,0.1), transparent 70%); }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 180px 0 120px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+    .tubes-cursor-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .hero .orb-1 { width: 700px; height: 700px; top: -250px; left: 50%; transform: translateX(-50%); }
+    .hero .orb-2 { width: 350px; height: 350px; bottom: -80px; right: -100px; }
+    .hero .orb-3 { width: 280px; height: 280px; bottom: 80px; left: -120px; }
+
+    .hero-rings {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-rings .ring {
+      position: absolute;
+      border: 1px solid rgba(108,92,231,0.05);
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero-rings .ring:nth-child(1) { width: 300px; height: 300px; }
+    .hero-rings .ring:nth-child(2) { width: 500px; height: 500px; }
+    .hero-rings .ring:nth-child(3) { width: 700px; height: 700px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 22px;
+      border-radius: 100px;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #D1FAE5;
+      margin-bottom: 28px;
+      animation: fadeIn 0.6s ease;
+    }
+    .hero-badge .pulse {
+      width: 7px; height: 7px;
+      background: #22C55E;
+      border-radius: 50%;
+      animation: pulse-glow 2s ease infinite;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.55);
+    }
+
+    .hero h1 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+    .hero .lead {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+      color: #ffffff;
+    }
+    .hero .btn-group { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
+
+    /* Floating shapes */
+    .hero-shape {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+    .hero-shape svg { width: 100%; height: 100%; }
+    .shape-1 { top: 18%; left: 8%; width: 44px; height: 44px; animation: float 6s ease-in-out infinite; }
+    .shape-2 { top: 30%; right: 10%; width: 32px; height: 32px; animation: float 5s ease-in-out infinite 1s; }
+    .shape-3 { bottom: 25%; left: 12%; width: 28px; height: 28px; animation: float 7s ease-in-out infinite 0.5s; }
+    .shape-4 { bottom: 20%; right: 8%; width: 50px; height: 50px; animation: float 8s ease-in-out infinite 2s; }
+
+    /* ========== STATS ========== */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 56px;
+    }
+    .stat-item { text-align: center; }
+    .stat-value {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--accent-light), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .stat-label { font-weight: 600; font-size: 1rem; margin-top: 8px; }
+    .stat-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      transition: border-color 0.3s;
+    }
+    .trust-badge:hover { border-color: rgba(0,206,201,0.2); }
+    .trust-badge .dot-indicator {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green-glow);
+      flex-shrink: 0;
+    }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 72px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(108,92,231,0.08), transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(0,206,201,0.06), transparent 50%);
+      pointer-events: none;
+    }
+    .dotted-surface-container {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 1;
+      overflow: hidden;
+      border-radius: inherit;
+    }
+    .dotted-surface-container canvas {
+      width: 100%;
+      height: 100%;
+    }
+    .cta-banner > *:not(.dotted-surface-container):not(.corner-deco) {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner .corner-deco {
+      position: absolute;
+      width: 80px; height: 80px;
+      pointer-events: none;
+      opacity: 0.15;
+    }
+    .cta-banner .corner-deco.tl { top: 16px; left: 16px; border-top: 2px solid var(--accent-light); border-left: 2px solid var(--accent-light); border-radius: 4px 0 0 0; }
+    .cta-banner .corner-deco.tr { top: 16px; right: 16px; border-top: 2px solid var(--accent-light); border-right: 2px solid var(--accent-light); border-radius: 0 4px 0 0; }
+    .cta-banner .corner-deco.bl { bottom: 16px; left: 16px; border-bottom: 2px solid var(--green); border-left: 2px solid var(--green); border-radius: 0 0 0 4px; }
+    .cta-banner .corner-deco.br { bottom: 16px; right: 16px; border-bottom: 2px solid var(--green); border-right: 2px solid var(--green); border-radius: 0 0 4px 0; }
+    .cta-banner .cta-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 24px;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.5px;
+    }
+
+    /* ========== STORY SECTION ========== */
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .story-content p {
+      color: var(--text-secondary);
+      font-size: 1.04rem;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .story-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .story-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+    }
+    .story-highlight {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #86EFAC;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    .story-card .big-text {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #22C55E, #22D3EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+    }
+    @keyframes glowPulse {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.15); }
+    }
+    .story-card .big-text::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280%;
+      height: 400%;
+      background: radial-gradient(ellipse at center, rgba(108, 92, 231, 0.35) 0%, rgba(50, 117, 248, 0.2) 45%, transparent 75%);
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(25px);
+    }
+    .story-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* ========== MISSION & VISION ========== */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .mv-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+      cursor: pointer;
+    }
+    .mv-card:hover {
+      transform: translateY(-4px);
+    }
+    .mv-card.mission {
+      border: 2px solid transparent;
+      background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                  linear-gradient(90deg, #007E6E, #73AF6F) border-box;
+    }
+    .mv-card.vision {
+      border: 2px solid transparent;
+      background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                  linear-gradient(90deg, #007E6E, #73AF6F) border-box;
+    }
+    .mv-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+    }
+    .badge-purple { background: rgba(108,92,231,0.1); color: var(--accent-light); }
+    .badge-green { background: rgba(0,206,201,0.1); color: var(--green); }
+    .mv-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .mv-card p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    /* ========== VALUES ========== */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .value-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 38px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(116, 94, 235, 0.05), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(0, 198, 255, 0.04), transparent 28%),
+        linear-gradient(180deg, rgba(11, 17, 33, 0.95), rgba(8, 13, 26, 0.96));
+      border: 1px solid transparent;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(132, 177, 121, 0.08), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(162, 203, 139, 0.06), transparent 28%),
+        linear-gradient(180deg, rgba(11, 17, 33, 0.95), rgba(8, 13, 26, 0.96)) padding-box,
+        linear-gradient(135deg, #84B179, #A2CB8B) border-box;
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 18px 30px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+      text-align: center;
+    }
+    .value-card::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 4px;
+      height: calc(100% - 36px);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #84B179, #A2CB8B);
+      opacity: 0.95;
+      transition:
+        opacity 0.4s ease,
+        filter 0.4s ease,
+        transform 0.4s ease;
+    }
+    .value-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(132, 177, 121, 0.18), transparent 35%),
+        radial-gradient(circle at 100% 100%, rgba(162, 203, 139, 0.18), transparent 30%);
+      opacity: 0.18;
+      transition: opacity 0.4s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(162, 203, 139, 0.45);
+      background:
+        radial-gradient(circle at 85% 15%, rgba(132, 177, 121, 0.14), transparent 34%),
+        radial-gradient(circle at 100% 100%, rgba(162, 203, 139, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(22, 24, 52, 0.95), rgba(10, 18, 36, 0.97)) padding-box,
+        linear-gradient(135deg, #84B179, #A2CB8B) border-box;
+      box-shadow:
+        0 22px 45px rgba(0, 0, 0, 0.5),
+        0 0 24px rgba(132, 177, 121, 0.14),
+        0 0 34px rgba(162, 203, 139, 0.12);
+    }
+    .value-card:hover::before {
+      filter:
+        drop-shadow(0 0 10px rgba(132, 177, 121, 0.55))
+        drop-shadow(0 0 12px rgba(162, 203, 139, 0.45));
+      transform: scaleY(1.02);
+    }
+    .value-card:hover::after {
+      opacity: 0.85;
+    }
+    .value-card > * {
+      position: relative;
+      z-index: 1;
+    }
+    .value-icon-wrap {
+      width: 60px; height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .value-icon-wrap .icon-glyph { font-size: 1.5rem; position: relative; z-index: 1; }
+    .fi-purple { background: rgba(108,92,231,0.1); }
+    .fi-green { background: rgba(0,206,201,0.08); }
+    .fi-blue { background: rgba(116,185,255,0.08); }
+    .fi-orange { background: rgba(253,203,110,0.08); }
+    .fi-pink { background: rgba(253,121,168,0.08); }
+    .value-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .value-card .value-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent-light);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .value-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ========== TEAM ========== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .team-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+    }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin: 0 auto 18px;
+      position: relative;
+    }
+    .team-avatar::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 2px solid rgba(108,92,231,0.15);
+    }
+    .ta-1 { background: rgba(108,92,231,0.15); color: var(--accent-light); }
+    .ta-2 { background: rgba(0,206,201,0.12); color: var(--green); }
+    .ta-3 { background: rgba(253,203,110,0.12); color: var(--orange); }
+    .ta-4 { background: rgba(116,185,255,0.12); color: var(--blue); }
+    .team-card .name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .team-card .role {
+      font-size: 0.82rem;
+      color: var(--accent-light);
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .team-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== FOOTER CTA BANNER ===== */
+    .footer-cta-banner {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 20px 68px;
+      background:
+        radial-gradient(circle at 50% 62%, rgba(34, 197, 94, 0.12), transparent 28%),
+        radial-gradient(circle at 78% 22%, rgba(45, 212, 191, 0.08), transparent 22%),
+        linear-gradient(180deg, #05070b 0%, #08101a 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-cta-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .footer-cta-banner::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      transform: translateX(-50%);
+      width: min(720px, 88%);
+      height: 110px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(34, 197, 94, 0.16) 0%,
+        rgba(45, 212, 191, 0.09) 30%,
+        rgba(0, 0, 0, 0) 72%
+      );
+      filter: blur(18px);
+      pointer-events: none;
+    }
+
+    .footer-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-cta-banner h2 {
+      margin: 0;
+      color: #f8fafc;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+      text-wrap: balance;
+      font-size: clamp(2rem, 4.8vw, 4rem);
+    }
+
+    .footer-cta-banner h2 span {
+      display: block;
+      margin-top: 6px;
+      background: linear-gradient(90deg, #22C55E, #2DD4BF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 8px rgba(45, 212, 191, 0.14);
+    }
+
+    @media (max-width: 900px) {
+      .footer-cta-banner {
+        padding: 60px 18px 58px;
+      }
+
+      .footer-cta-banner::before {
+        background-size: 56px 56px;
+      }
+
+      .footer-cta-banner::after {
+        width: min(560px, 90%);
+        height: 90px;
+        bottom: -28px;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: clamp(1.9rem, 6vw, 3rem);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-cta-banner {
+        padding: 48px 16px 46px;
+      }
+
+      .footer-cta-banner::before {
+        background-size: 40px 40px;
+        opacity: 0.32;
+      }
+
+      .footer-cta-banner::after {
+        width: 92%;
+        height: 68px;
+        bottom: -18px;
+        filter: blur(14px);
+      }
+
+      .footer-cta-inner {
+        max-width: 100%;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: clamp(1.7rem, 8vw, 2.3rem);
+        line-height: 1.06;
+        letter-spacing: -0.03em;
+      }
+
+      .footer-cta-banner h2 span {
+        margin-top: 4px;
+        text-shadow: 0 0 6px rgba(45, 212, 191, 0.12);
+      }
+    }
+
+    @media (max-width: 380px) {
+      .footer-cta-banner {
+        padding: 42px 14px 40px;
+      }
+
+      .footer-cta-banner h2 {
+        font-size: 1.55rem;
+      }
+
+      .footer-cta-banner::after {
+        height: 56px;
+      }
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 2;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 72px 0 48px;
+    }
+    .footer-brand p {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.78rem;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    .footer-col ul a:hover { color: var(--accent-light); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom a {
+      color: var(--accent-light);
+      text-decoration: none;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover {
+      border-color: var(--accent-light);
+      color: var(--accent-light);
+      background: rgba(108,92,231,0.06);
+    }
+
+    /* ========== BACK TO TOP ========== */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+      backdrop-filter: blur(12px);
+      font-size: 1.1rem;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .story-layout { grid-template-columns: 1fr; }
+      .story-visual { order: -1; }
+      .mv-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 80px 0; }
+      .hero { padding: 140px 0 100px; min-height: auto; }
+      .stats-row { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .cta-banner { padding: 48px 28px; }
+      .trust-bar { gap: 10px; }
+      .trust-badge { font-size: 0.75rem; padding: 8px 14px; }
+      .nav-links { display: none; }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10,11,16,0.97);
+        backdrop-filter: blur(20px);
+        padding: 32px 28px;
+        gap: 4px;
+        align-items: stretch;
+        animation: fadeIn 0.3s ease;
+        z-index: 999;
+      }
+      .nav-links.active a {
+        padding: 16px 20px;
+        font-size: 1.05rem;
+        border-radius: 12px;
+      }
+      .nav-links.active .nav-cta {
+        margin-top: 12px;
+        text-align: center;
+        justify-content: center;
+      }
+      .menu-toggle { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+    @media (max-width: 540px) {
+      .mv-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr; }
+      .btn-group { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 340px; justify-content: center; }
+      h1 { font-size: 2.2rem; }
+    }
+
+    /* (Removed) Flickering grid banner */
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+ <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="CyberG7 Technologies Home">
+  <img src="https://assets.cdn.filesafe.space/2rFW4hcKsbFWqLW3Dkmj/media/69ae2a1014ebc328fb5c8e25.png" class="nav-logo-img" alt="CyberG7 Logo">
+  CyberG7
+</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/pdpa">PDPA</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact" class="shiny-cta shiny-cta-hero shiny-cta-nav"><span>Get Started</span></a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <canvas class="tubes-cursor-canvas" id="tubesCursorCanvas" aria-hidden="true"></canvas>
+    <div class="orb orb-purple orb-1"></div>
+    <div class="orb orb-green orb-2"></div>
+    <div class="orb orb-pink orb-3"></div>
+    <div class="hero-rings">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+
+    <div class="hero-shape shape-1">
+      <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="6" stroke="#6c5ce7" stroke-width="1.5" opacity="0.5"/></svg>
+    </div>
+    <div class="hero-shape shape-2">
+      <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#00cec9" stroke-width="1.5" opacity="0.5"/></svg>
+    </div>
+    <div class="hero-shape shape-3">
+      <svg viewBox="0 0 28 28" fill="none"><polygon points="14,2 26,24 2,24" stroke="#a29bfe" stroke-width="1.5" fill="none" opacity="0.4"/></svg>
+    </div>
+    <div class="hero-shape shape-4">
+      <svg viewBox="0 0 50 50" fill="none"><path d="M25 5 L45 25 L25 45 L5 25 Z" stroke="#00cec9" stroke-width="1" opacity="0.3"/></svg>
+    </div>
+
+    <div class="container">
+      <div class="hero-badge"><span class="pulse"></span> Our Story</div>
+      <h1>About <span class="gradient-text" style="background: linear-gradient(90deg, #22C55E, #22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CyberG7 Technologies</span></h1>
+      <p class="lead">
+        Singapore's trusted web partner &mdash; helping startups and SMEs launch professional websites in 7 days. ACRA registered and committed to making quality web design accessible to every business.
+      </p>
+      <div class="btn-group">
+        <a href="/contact" class="shiny-cta shiny-cta-hero"><span>Work With Us</span></a>
+        <a href="#our-story" class="btn btn-outline">Read Our Story &darr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR STORY ===== -->
+  <section class="section-alt" id="our-story">
+    <div class="container">
+      <div class="story-layout">
+        <div class="reveal story-content">
+          <div class="section-label">Our Story</div>
+          <h2>Built to Solve a Real Problem</h2>
+          <p>
+            CyberG7 Technologies was founded with a singular purpose: to solve the problem of overpriced web development for Singapore startups. We watched too many newly ACRA-registered businesses burn through their startup capital on websites that cost thousands &mdash; before they had even earned their first dollar.
+          </p>
+          <p>
+            We knew there had to be a better way. A way for every hawker stall, every consultancy, every first-time entrepreneur to get online without financial strain. So we built it.
+          </p>
+          <p>
+            As an ACRA-registered company ourselves, we understand the challenges Singapore SMEs face. Our mission from day one has been to make a professional web presence accessible to every business &mdash; regardless of budget.
+          </p>
+        </div>
+        <div class="story-visual reveal reveal-delay-2">
+          <div class="story-card">
+            <div class="story-highlight">Our Commitment</div>
+            <div class="big-text">S$288</div>
+            <p>Professional websites for Singapore startups. No compromises on quality. No hidden fees. Just a credible online presence that helps your business grow from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION & VISION ===== -->
+  <section>
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="section-label centered">Mission &amp; Vision</div>
+        <h2>What Drives Us Forward</h2>
+        <p class="lead">Every decision we make is guided by our commitment to Singapore's startup ecosystem and the entrepreneurs who power it.</p>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mission reveal reveal-delay-1">
+          <span class="mv-badge badge-purple">Our Mission</span>
+          <h3>Empowering Every Singapore SME</h3>
+          <p>To empower every Singapore startup and SME with an affordable, professional digital presence. We believe that cost should never be a barrier to credibility, and that every business deserves to look its best online from the very first day.</p>
+        </div>
+        <div class="mv-card vision reveal reveal-delay-2">
+          <span class="mv-badge badge-green">Our Vision</span>
+          <h3>A Connected Singapore Business Landscape</h3>
+          <p>A Singapore where no business is held back by the cost of going online. We envision a future where every hawker, freelancer, consultant, and startup has an equal opportunity to reach customers through a professional digital presence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR VALUES ===== -->
+  <section class="section-alt">
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="section-label centered">Our Values</div>
+        <h2>The Principles That Guide Our Work</h2>
+        <p class="lead">Four core values define how we serve Singapore's startup community. They are non-negotiable.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-icon-wrap fi-green"><span class="icon-glyph">&#9889;</span></div>
+          <h3>Speed</h3>
+          <div class="value-meta">7-DAY DELIVERY</div>
+          <p>Time is your most valuable resource as a startup founder. We deliver professional websites in 7 days &mdash; not weeks or months &mdash; so you can start growing immediately.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-icon-wrap fi-purple"><span class="icon-glyph">&#9733;</span></div>
+          <h3>Affordability</h3>
+          <div class="value-meta">STARTING FROM S$288</div>
+          <p>Professional web design should not cost a fortune. Starting at just S$288, we prove that quality and affordability can coexist &mdash; especially when it matters most.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div class="value-icon-wrap fi-blue"><span class="icon-glyph">&#10004;</span></div>
+          <h3>Quality</h3>
+          <div class="value-meta">PROFESSIONAL STANDARDS</div>
+          <p>Every website we build meets the same professional standards as agencies charging 10 times more. Mobile-responsive, SEO-ready, and designed to convert visitors into customers.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-4">
+          <div class="value-icon-wrap fi-orange"><span class="icon-glyph">&#9678;</span></div>
+          <h3>Transparency</h3>
+          <div class="value-meta">NO HIDDEN FEES</div>
+          <p>What you see is what you pay. No surprise charges, no lock-in contracts, no hidden renewal fees. We believe trust is built through honesty and clarity in everything we do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY SINGAPORE TRUSTS US ===== -->
+  <section>
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="section-label centered">Why Singapore Trusts Us</div>
+        <h2>The Numbers Speak for Themselves</h2>
+        <p class="lead">Backed by real results and trusted by thousands of Singapore businesses. Here is what we have achieved together.</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-value">3,000+</div>
+          <div class="stat-label">SMEs Launched</div>
+          <div class="stat-desc">Singapore startups and SMEs that trusted us with their digital presence</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-value">7 Days</div>
+          <div class="stat-label">Average Delivery</div>
+          <div class="stat-desc">From brief to live website &mdash; faster than any traditional agency</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Satisfaction</div>
+          <div class="stat-desc">Up to 3 rounds of revisions included. We get it right, together</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-value">ACRA</div>
+          <div class="stat-label">Registered</div>
+          <div class="stat-desc">A legitimate, registered Singapore business you can trust and verify</div>
+        </div>
+      </div>
+      <div class="trust-bar reveal">
+        <div class="trust-badge"><span class="dot-indicator"></span> ACRA Registered</div>
+        <div class="trust-badge"><span class="dot-indicator"></span> SME Centre Supported</div>
+        <div class="trust-badge"><span class="dot-indicator"></span> IMDA AI Initiative</div>
+        <div class="trust-badge"><span class="dot-indicator"></span> Singapore-Based Team</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR TEAM ===== -->
+  <section class="section-alt">
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="section-label centered">Our Team</div>
+        <h2>The People Behind CyberG7</h2>
+        <p class="lead">A dedicated Singapore-based team of designers, developers, and strategists committed to helping your business succeed online.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar ta-1">DT</div>
+          <div class="name">Daniel Tan</div>
+          <div class="role">CEO &amp; Founder</div>
+          <p>Entrepreneur with a passion for making technology accessible. Founded CyberG7 to bridge the gap between professional web design and startup budgets.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar ta-2">SL</div>
+          <div class="name">Sarah Lim</div>
+          <div class="role">Lead Designer</div>
+          <p>Award-winning designer who believes great design is not about complexity &mdash; it is about clarity. Turns business goals into beautiful, functional interfaces.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar ta-3">RK</div>
+          <div class="name">Raj Kumar</div>
+          <div class="role">Lead Developer</div>
+          <p>Full-stack developer focused on performance and reliability. Ensures every website is fast, secure, mobile-responsive, and built to last.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar ta-4">MN</div>
+          <div class="name">Michelle Ng</div>
+          <div class="role">Client Success</div>
+          <p>Dedicated to making every client experience seamless. From first brief to final launch, she ensures you are supported at every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section style="padding:60px 0;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="dotted-surface-container" id="dottedSurface"></div>
+        <div class="corner-deco tl"></div>
+        <div class="corner-deco tr"></div>
+        <div class="corner-deco bl"></div>
+        <div class="corner-deco br"></div>
+        <h2>Ready to Join 3,000+<br>Singapore Businesses?</h2>
+        <p class="lead">Get a professional website in 7 days for just S$288. No lock-in contracts, no hidden fees &mdash; just a credible online presence built for Singapore startups and SMEs.</p>
+        <div class="btn-group">
+          <a href="https://launchnow.cyberg7.com.sg/intake" class="shiny-cta shiny-cta-hero"><span>Get Started Today</span></a>
+          <a href="/contact" class="btn btn-outline">Talk to Our Team</a>
+        </div>
+        <p class="cta-note">No lock-in contracts &middot; No hidden fees &middot; Revisions included</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA BANNER ===== -->
+  <section class="footer-cta-banner">
+    <div class="footer-cta-inner">
+      <h2>
+        From Idea to Website
+        <span>in Just 7 Days</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+         <a href="/" class="nav-logo" style="margin-bottom:4px;">
+  <img src="https://assets.cdn.filesafe.space/2rFW4hcKsbFWqLW3Dkmj/media/69ae2a1014ebc328fb5c8e25.png" 
+       alt="CyberG7 Logo" 
+       class="nav-logo-img">
+  CyberG7
+</a>
+          <p>Professional websites for Singapore startups and SMEs. Go live in 7 days for just S$288. ACRA registered, SME Centre supported.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#features">Phase 1 Website</a></li>
+            <li><a href="/#pricing">Phase 2 Growth</a></li>
+            <li><a href="/#showcase">Portfolio</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/pdpa">PDPA Notice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CyberG7 Technologies. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/cyberg7/" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/cyberg7technologies/" aria-label="Facebook">fb</a>
+          <a href="https://www.instagram.com/cyber.g7/" aria-label="Instagram">ig</a>
+          <a href="https://x.com/cyberg7digital" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ===== Scroll Reveal =====
+      const reveals = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => revealObserver.observe(el));
+
+      // ===== Navbar Scroll =====
+      const navbar = document.querySelector('.navbar');
+      const backToTop = document.getElementById('backToTop');
+      let navTicking = false;
+
+      window.addEventListener('scroll', () => {
+        if (!navTicking) {
+          requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            navbar.classList.toggle('scrolled', scrollY > 60);
+            backToTop.classList.toggle('visible', scrollY > 600);
+
+            // Parallax on orbs
+            document.querySelectorAll('.orb').forEach((orb, i) => {
+              const speed = 0.03 + (i * 0.01);
+              orb.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+
+            navTicking = false;
+          });
+          navTicking = true;
+        }
+      });
+
+      // ===== Back to Top =====
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ===== Mobile Menu =====
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Close mobile menu on link click
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ===== Smooth link scrolling for nav =====
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Three.js for Dotted Surface -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    (function() {
+      const container = document.getElementById('dottedSurface');
+      if (!container) return;
+
+      const SEPARATION = 100;
+      const AMOUNTX = 30;
+      const AMOUNTY = 20;
+
+      // Scene setup
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+        60,
+        container.offsetWidth / container.offsetHeight,
+        1,
+        10000
+      );
+      camera.position.set(0, 300, 800);
+
+      const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+      });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setClearColor(0x000000, 0);
+
+      container.appendChild(renderer.domElement);
+
+      // Create particles
+      const positions = [];
+      const colors = [];
+      const geometry = new THREE.BufferGeometry();
+
+      for (let ix = 0; ix < AMOUNTX; ix++) {
+        for (let iy = 0; iy < AMOUNTY; iy++) {
+          const x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
+          const y = 0;
+          const z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
+          positions.push(x, y, z);
+          // Dot color: #BCD9A2 (with subtle per-dot variance)
+          colors.push(
+            (188 / 255) + (Math.random() - 0.5) * 0.05,
+            (217 / 255) + (Math.random() - 0.5) * 0.05,
+            (162 / 255) + (Math.random() - 0.5) * 0.05
+          );
+        }
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+      const material = new THREE.PointsMaterial({
+        size: 10,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.95,
+        sizeAttenuation: true
+      });
+
+      const points = new THREE.Points(geometry, material);
+      scene.add(points);
+
+      let count = 0;
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        const positionAttribute = geometry.attributes.position;
+        const posArray = positionAttribute.array;
+
+        let i = 0;
+        for (let ix = 0; ix < AMOUNTX; ix++) {
+          for (let iy = 0; iy < AMOUNTY; iy++) {
+            const index = i * 3;
+            posArray[index + 1] =
+              Math.sin((ix + count) * 0.3) * 40 +
+              Math.sin((iy + count) * 0.5) * 40;
+            i++;
+          }
+        }
+
+        positionAttribute.needsUpdate = true;
+        renderer.render(scene, camera);
+        count += 0.08;
+      }
+
+      function handleResize() {
+        if (!container.offsetWidth || !container.offsetHeight) return;
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      }
+
+      window.addEventListener('resize', handleResize);
+      animate();
+    })();
+
+  </script>
+
+  <script type="module">
+    // ===== Tubes Cursor (About hero only) =====
+    (function initTubesCursor() {
+      const canvas = document.getElementById('tubesCursorCanvas');
+      if (!canvas) return;
+
+      let app = null;
+
+      const initTimer = setTimeout(async () => {
+        try {
+          const mod = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+          const TubesCursor = mod && mod.default ? mod.default : null;
+          if (!TubesCursor) return;
+
+          app = TubesCursor(canvas, {
+            tubes: {
+              colors: ['#22C55E', '#22D3EE', '#4ADE80'],
+              lights: {
+                intensity: 45,
+                colors: ['#22D3EE', '#22C55E', '#4ADE80', '#86EFAC']
+              }
+            }
+          });
+        } catch (e) {
+          // If CDN is blocked, keep page usable.
+        }
+      }, 120);
+
+      window.addEventListener('beforeunload', () => {
+        clearTimeout(initTimer);
+        if (app && typeof app.dispose === 'function') app.dispose();
+      });
+    })();
+  </script>
+</body>
+</html>
