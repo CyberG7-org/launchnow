@@ -28,7 +28,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194187704"></script>
@@ -1555,39 +1554,97 @@
       <!-- Contact Form -->
       <div class="contact-form-card reveal reveal-delay-1">
         <h3>Your Business Brief</h3>
-        <p class="form-subtitle">Takes about 2 minutes. Your preview is free.</p>
-        <!--
-          PROVISIONAL field set (baseline only). The final fields + exact payload keys
-          must be ported from website-factory IntakeForm.tsx at Gate 0 — see PLAN.md.
-        -->
+        <p class="form-subtitle">Takes about 2 minutes. Your preview is free — nothing to pay to see it.</p>
+        <!-- Fields + payload keys match the website-factory intakeSchema (POST /api/intake). -->
         <form id="intakeForm" novalidate>
+          <!-- 01 · About -->
           <div class="form-group">
-            <label for="full_name">Full Name <span class="required">*</span></label>
-            <input type="text" id="full_name" name="full_name" class="form-input" placeholder="Full Name" required autocomplete="name">
+            <label for="brand">Business / Brand Name <span class="required">*</span></label>
+            <input type="text" id="brand" name="brand" class="form-input" placeholder="e.g. Strait Logistics" required autocomplete="organization">
           </div>
           <div class="form-group">
             <label for="email">Email <span class="required">*</span></label>
             <input type="email" id="email" name="email" class="form-input" placeholder="you@business.com" required autocomplete="email">
+            <p class="form-note" style="margin-top:6px;">We'll send your preview link here.</p>
           </div>
           <div class="form-group">
-            <label for="phone">Phone <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone number" required autocomplete="tel">
+            <label for="industry">Industry <span class="required">*</span></label>
+            <input type="text" id="industry" name="industry" class="form-input" placeholder="Logistics &middot; F&amp;B &middot; Professional services" required>
           </div>
           <div class="form-group">
-            <label for="business_name">Business Name <span class="required">*</span></label>
-            <input type="text" id="business_name" name="business_name" class="form-input" placeholder="e.g. My Startup Pte Ltd" required autocomplete="organization">
+            <label for="businessType">Business Type</label>
+            <select id="businessType" name="businessType" class="form-input">
+              <option value="">Not sure / other</option>
+              <option value="ai_automation">AI Automation</option>
+              <option value="saas">SaaS</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="professional_services">Professional Services</option>
+              <option value="local_sme">Local Service Business</option>
+              <option value="healthcare">Healthcare &amp; Wellness</option>
+              <option value="finance">Finance &amp; Fintech</option>
+              <option value="education">Education &amp; Training</option>
+              <option value="real_estate">Real Estate</option>
+              <option value="hospitality">Hospitality &amp; F&amp;B</option>
+              <option value="legal">Legal</option>
+              <option value="construction">Construction &amp; Trades</option>
+              <option value="personal_brand">Personal Brand</option>
+              <option value="nonprofit">Nonprofit</option>
+            </select>
+          </div>
+          <!-- 02 · Positioning -->
+          <div class="form-group">
+            <label for="primaryGoal">Primary Goal</label>
+            <select id="primaryGoal" name="primaryGoal" class="form-input">
+              <option value="">Not sure yet</option>
+              <option value="lead_generation">Generate leads</option>
+              <option value="bookings">Get bookings</option>
+              <option value="sales">Drive sales</option>
+              <option value="product_demo">Book product demos</option>
+              <option value="waitlist">Build a waitlist</option>
+              <option value="investor_credibility">Investor credibility</option>
+              <option value="hiring">Hiring</option>
+              <option value="brand_repositioning">Brand repositioning</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="industry">Industry / What You Do <span class="required">*</span></label>
-            <input type="text" id="industry" name="industry" class="form-input" placeholder="e.g. Cafe, law firm, online store" required>
+            <label for="goal">Your Goal, in One Line <span class="required">*</span></label>
+            <textarea id="goal" name="goal" class="form-input" rows="2" placeholder="e.g. Win mid-market shippers with a faster customs flow." required></textarea>
           </div>
           <div class="form-group">
-            <label for="description">Tell Us About Your Business <span class="required">*</span></label>
-            <textarea id="description" name="description" class="form-input" placeholder="What you offer, who your customers are, and anything you want on the site..." required></textarea>
+            <label for="audience">Audience <span class="required">*</span></label>
+            <input type="text" id="audience" name="audience" class="form-input" placeholder="e.g. Shipping managers at Singapore SMEs" required>
+          </div>
+          <!-- 03 · Competitors (at least one) -->
+          <div class="form-group">
+            <label for="competitor1">Competitor Website 1 <span class="required">*</span></label>
+            <input type="url" id="competitor1" name="competitor1" class="form-input" placeholder="https://example.com" required>
           </div>
           <div class="form-group">
-            <label for="style">Preferred Style or Colours</label>
-            <input type="text" id="style" name="style" class="form-input" placeholder="e.g. Clean and modern, navy + gold (optional)">
+            <label for="competitor2">Competitor Website 2</label>
+            <input type="url" id="competitor2" name="competitor2" class="form-input" placeholder="https://example.com (optional)">
+          </div>
+          <div class="form-group">
+            <label for="competitor3">Competitor Website 3</label>
+            <input type="url" id="competitor3" name="competitor3" class="form-input" placeholder="https://example.com (optional)">
+          </div>
+          <!-- 04 · The look (optional) -->
+          <div class="form-group">
+            <label for="vibe">Preferred Look</label>
+            <select id="vibe" name="vibe" class="form-input">
+              <option value="">Match a look to my industry</option>
+              <option value="professional">Cool &amp; Professional</option>
+              <option value="editorial">Warm &amp; Editorial</option>
+              <option value="minimal">Refined &amp; Minimal</option>
+              <option value="bold">Bold &amp; Energetic</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="primaryColor">Primary Colour</label>
+            <input type="text" id="primaryColor" name="primaryColor" class="form-input" placeholder="#6c5ce7 (optional)" pattern="#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})">
+          </div>
+          <div class="form-group">
+            <label for="accentColor">Accent Colour</label>
+            <input type="text" id="accentColor" name="accentColor" class="form-input" placeholder="#a29bfe (optional)" pattern="#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})">
           </div>
           <!-- PDPA consent — required before submit (PLAN.md security/privacy) -->
           <div class="form-group" style="margin-top:4px;">
@@ -1601,9 +1658,9 @@
             <label for="company_website">Company Website</label>
             <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
           </div>
-          <button type="submit" class="form-submit" id="intakeSubmit">Generate My Free Preview</button>
+          <button type="submit" class="form-submit" id="intakeSubmit">Build My Free Preview</button>
           <div class="form-status" id="intakeStatus" role="status" aria-live="polite"></div>
-          <p class="form-note">LaunchNow &middot; Free preview &middot; <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+          <p class="form-note">Free preview &middot; No payment to see it &middot; <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
         </form>
       </div>
 
@@ -1876,39 +1933,32 @@
     });
   </script>
 
-  <!-- ===== INTAKE FORM → shared backend (/api/intake, tenant=launchnow) ===== -->
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+  <!-- ===== INTAKE FORM → shared backend (POST /api/intake) ===== -->
   <script>
     (function () {
-      // --- Config ---
-      // Shared backend (website-factory). CORS-direct from the browser, like the contact webhook.
+      // Shared website-factory backend. Direct browser call (CORS) per PLAN.md.
+      // REQUIRES the backend to send Access-Control-Allow-Origin for this origin (Gate 1),
+      // OR a narrow /api proxy in vercel.json. Keep BACKEND_READY=false until that + the
+      // backend are live — otherwise the cross-origin POST is blocked / 404s.
       var INTAKE_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake';
-      // Flip to true only AFTER Gate 0 (exact contract confirmed) + Gate 1 (backend live).
-      // Until then we do NOT POST a guessed payload at a not-yet-live endpoint.
       var BACKEND_READY = false;
       // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
       var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
       var form = document.getElementById('intakeForm');
       if (!form) return;
-
-      var phoneInput = document.getElementById('phone');
       var statusEl = document.getElementById('intakeStatus');
       var submitBtn = document.getElementById('intakeSubmit');
-
-      var iti = window.intlTelInput(phoneInput, {
-        initialCountry: 'sg',
-        preferredCountries: ['sg', 'my'],
-        separateDialCode: true,
-        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
-      });
 
       function showStatus(type, msg) {
         statusEl.className = 'form-status show ' + type;
         statusEl.textContent = msg;
       }
-
-      // Only follow a backend-provided checkoutUrl if it is https on an allow-listed host.
+      function val(name) {
+        var el = form.elements[name];
+        return el && typeof el.value === 'string' ? el.value.trim() : '';
+      }
+      // Only follow a backend checkoutUrl if it is https on an allow-listed host.
       function safeCheckoutUrl(url) {
         try {
           var u = new URL(url);
@@ -1926,29 +1976,26 @@
           form.reset();
           return;
         }
+        // Native validation enforces required fields, url/email types, hex pattern, and consent.
+        if (!form.checkValidity()) { form.reportValidity(); return; }
 
-        // Native validation also enforces the required PDPA consent checkbox.
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-        if (iti && typeof iti.isValidNumber === 'function' && !iti.isValidNumber()) {
-          showStatus('error', 'Please enter a valid phone number.');
-          phoneInput.focus();
-          return;
-        }
+        // Payload keys match the website-factory intakeSchema exactly.
+        var competitorUrls = ['competitor1', 'competitor2', 'competitor3']
+          .map(val)
+          .filter(function (u) { return u.length > 0; });
 
-        // PROVISIONAL payload — final keys come from the Gate-0 contract (IntakeForm.tsx / route.ts).
         var payload = {
-          tenant: 'launchnow',
-          full_name: form.full_name.value.trim(),
-          email: form.email.value.trim(),
-          phone: (iti && iti.getNumber) ? iti.getNumber() : phoneInput.value.trim(),
-          business_name: form.business_name.value.trim(),
-          industry: form.industry.value.trim(),
-          description: form.description.value.trim(),
-          style: form.style.value.trim(),
-          company_website: ''
+          brand: val('brand'),
+          email: val('email'),
+          industry: val('industry'),
+          competitorUrls: competitorUrls,
+          goal: val('goal'),
+          audience: val('audience'),
+          businessType: val('businessType') || undefined,
+          primaryGoal: val('primaryGoal') || undefined,
+          vibe: val('vibe') || undefined,
+          primaryColor: val('primaryColor') || undefined,
+          accentColor: val('accentColor') || undefined
         };
 
         if (typeof gtag === 'function') {
@@ -1956,16 +2003,15 @@
         }
 
         if (!BACKEND_READY) {
-          // Pre-Gate-0 shell: don't POST a guessed payload at a not-yet-live backend.
+          // Shell mode: backend CORS + live deploy pending — don't fire a cross-origin call yet.
           showStatus('success', 'Thanks! Instant website previews are going live shortly — we have recorded your interest and will email you the moment it is ready.');
           form.reset();
-          if (iti && iti.setCountry) iti.setCountry('sg');
           return;
         }
 
         var originalLabel = submitBtn.textContent;
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Generating...';
+        submitBtn.textContent = 'Building your preview…';
         statusEl.className = 'form-status';
 
         fetch(INTAKE_ENDPOINT, {
@@ -1974,19 +2020,20 @@
           body: JSON.stringify(payload)
         })
           .then(function (res) {
-            if (!res.ok) throw new Error('Request failed: ' + res.status);
-            return res.json().catch(function () { return {}; });
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              return { ok: res.ok, data: data || {} };
+            });
           })
-          .then(function (data) {
-            data = data || {};
-            // Deposit-first path (if backend returns Stripe): only follow a safe, allow-listed URL.
-            var checkout = data.checkoutUrl ? safeCheckoutUrl(data.checkoutUrl) : null;
+          .then(function (r) {
+            if (!r.ok || !r.data.jobId) {
+              showStatus('error', r.data.error || 'Something went wrong — please check your entries and try again.');
+              return;
+            }
+            // A deposit, if ever returned, is post-preview; follow only an allow-listed checkoutUrl.
+            var checkout = r.data.checkoutUrl ? safeCheckoutUrl(r.data.checkoutUrl) : null;
             if (checkout) { window.location.href = checkout; return; }
-            // Free-preview path: go to the native status page with the backend's opaque token.
-            var token = data.jobId || data.token || data.statusToken; // exact key TBD at Gate 0
-            if (token) { window.location.href = '/status?t=' + encodeURIComponent(token); return; }
-            showStatus('success', 'Thanks! Your preview is being generated — check your email shortly.');
-            form.reset();
+            // Free-preview path → native status page with the opaque jobId (UUIDv4).
+            window.location.href = '/status?job=' + encodeURIComponent(r.data.jobId);
           })
           .catch(function (err) {
             console.error('Intake error:', err);

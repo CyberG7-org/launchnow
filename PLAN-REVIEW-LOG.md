@@ -89,3 +89,13 @@ Implemented the backend-independent parts of the plan on claude/busy-curie-pjEii
 - status.html (new): noindex progress page. Polling scaffold — exponential backoff+jitter, hidden-tab pause, Retry-After, 10-min max duration, display-safe rendering — gated behind BACKEND_READY=false.
 - Verified: both pages serve HTTP 200 locally; tag balance clean (section 6/6, script 6/6 & 7/7, form 1/1 & 0/0); 0 leftover contact wiring in intake.
 TODO at Gate 0/1: pin exact fields + payload keys + status endpoint URL/response; flip BACKEND_READY; trim status.html trailing marketing sections; owner decisions (canonical host, Meta Pixel, Turnstile, Ads conversion label).
+
+## Gate 0 — contract pinned (2026-06-05)
+Read the website-factory source (uploaded zip, `main`). Wired intake.html + status.html to the REAL contract:
+- **POST /api/intake** (Zod `intakeSchema`). Required: `brand`, `email`, `industry`, `competitorUrls` (1–3 public URLs, ≥1), `goal`, `audience`. Optional: `businessType`, `primaryGoal`, `vibe` (professional|editorial|minimal|bold), `primaryColor`/`accentColor` (hex), `logoFileName`, `clerkUserId`. Unknown keys are stripped (z.object). Returns **`{ jobId }`** (UUIDv4 — opaque ✓). **No `checkoutUrl` at intake** → free-preview-first confirmed (deposit is post-preview via /api/checkout/<jobId> on the brand subdomain).
+- **GET /api/status/<jobId>** → `{ jobId, startedAt, snapshot, previewUrl?, failureReason? }`; `snapshot.currentStage` ∈ pending_payment|pending|researching|designing|generating_assets|building|testing|deploying|ready|failed. Ready ⇒ currentStage==='ready' (+ previewUrl). **Do NOT pass `?startedAt`** — that hits the time-based demo fallback that returns a canned `logistics-demo.cyberg7.com.sg` preview.
+- Form now matches exactly (dropped phone/full_name/description; added competitor URLs, goal, audience, businessType/primaryGoal/vibe/colours). Payload keys match the schema. Redirects to `/status?job=<jobId>`. Logo upload (multipart /api/upload-logo) omitted from the shell.
+- Corrections vs handover: **no `tenant` field on `main`** (that was the unmerged LaunchNow-HTML-connect branch); brand-curation.ts has no tenant either. So the funnel uses the same engine without a tenant key.
+
+### ⚠️ Blocker for go-live: backend has NO CORS
+Neither `/api/intake` nor `/api/status/[jobId]` sets `Access-Control-Allow-Origin` / handles `OPTIONS`. A cross-origin browser call from intake-launchnow.cyberg7.com.sg is therefore blocked. The chosen "direct + CORS" approach REQUIRES a backend change (add ACAO for our origin + preflight) — or switch to a narrow `/api` proxy in vercel.json (no backend change). `BACKEND_READY` stays `false` until that + Gate 1 (backend live). Owner decision pending.

@@ -1562,12 +1562,13 @@
   </div>
 </section>
 
-  <!-- ===== STATUS POLLING (native; reads opaque token, polls shared backend) ===== -->
+  <!-- ===== STATUS POLLING (native; polls shared backend GET /api/status/<jobId>) ===== -->
   <script>
     (function () {
-      // Status endpoint path + response keys are confirmed at Gate 0 (see PLAN.md). Token is opaque.
-      var STATUS_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake/status'; // exact path TBD at Gate 0
-      var BACKEND_READY = false; // flip true after Gate 0 (contract) + Gate 1 (backend live)
+      // <base>/<jobId>. Direct browser call → REQUIRES backend CORS for this origin (Gate 1),
+      // or a narrow /api proxy. Keep BACKEND_READY=false until that + the backend are live.
+      var STATUS_BASE = 'https://agency.cyberg7.com.sg/api/status';
+      var BACKEND_READY = false;
 
       var headline = document.getElementById('statusHeadline');
       var message  = document.getElementById('statusMessage');
@@ -1575,17 +1576,37 @@
       var preview  = document.getElementById('previewLink');
       var iconEl   = document.getElementById('statusIcon');
 
-      function set(h, m) { if (h) headline.textContent = h; if (m) message.textContent = m; }
+      // Friendly labels for the backend pipeline stages (job-status.ts STAGES).
+      var STAGE_LABELS = {
+        pending_payment: 'Waiting for confirmation…',
+        pending: 'Queued — starting up…',
+        researching: 'Researching your market…',
+        designing: 'Designing your site…',
+        generating_assets: 'Generating copy & images…',
+        building: 'Building your pages…',
+        testing: 'Quality-checking…',
+        deploying: 'Publishing your preview…',
+        ready: 'Your preview is ready!',
+        failed: 'Something went wrong'
+      };
+
+      function set(h, m) { if (h != null) headline.textContent = h; if (m != null) message.textContent = m; }
       function fail(m) { iconEl.textContent = '⚠️'; set('Something went wrong', m); }
       function ready(url) {
         iconEl.textContent = '✅';
-        set('Your preview is ready!', 'Redirecting you now…');
-        if (url) { preview.href = url; actions.style.display = 'block'; setTimeout(function () { window.location.href = url; }, 1500); }
+        if (url) {
+          set('Your preview is ready!', 'Redirecting you now…');
+          preview.href = url; actions.style.display = 'block';
+          setTimeout(function () { window.location.href = url; }, 1500);
+        } else {
+          set('Your preview is ready!', 'Check your email for the preview link.');
+        }
       }
 
-      // Opaque token from the intake submit (?t=...).
-      var token = new URLSearchParams(window.location.search).get('t');
-      if (!token) { fail('No job reference found. Please start again from the intake form.'); return; }
+      // Opaque jobId (UUIDv4) from the intake submit (?job=...).
+      var params = new URLSearchParams(window.location.search);
+      var jobId = params.get('job') || params.get('t');
+      if (!jobId) { fail('No job reference found. Please start again from the intake form.'); return; }
 
       if (!BACKEND_READY) {
         set('Preview generation is coming online', 'This status page is ready, but live preview generation is being switched on. We will email you the moment your preview is ready.');
@@ -1593,7 +1614,7 @@
       }
 
       // --- Polling policy: exponential backoff + jitter, pause when hidden, honor Retry-After, hard cap ---
-      var BASE = 2000, MAX_INTERVAL = 15000, MAX_DURATION = 10 * 60 * 1000;
+      var BASE = 2000, MAX_INTERVAL = 15000, MAX_DURATION = 15 * 60 * 1000;
       var started = Date.now(), attempt = 0;
 
       function nextDelay(retryAfterSec) {
@@ -1610,7 +1631,8 @@
           return;
         }
         attempt++;
-        fetch(STATUS_ENDPOINT + '?t=' + encodeURIComponent(token), { headers: { 'Accept': 'application/json' } })
+        // NOTE: do NOT add ?startedAt — that triggers the backend's demo-fallback preview.
+        fetch(STATUS_BASE + '/' + encodeURIComponent(jobId), { headers: { 'Accept': 'application/json' } })
           .then(function (res) {
             var ra = parseInt(res.headers.get('Retry-After'), 10);
             if (!res.ok) throw Object.assign(new Error('HTTP ' + res.status), { retryAfter: ra });
@@ -1618,10 +1640,10 @@
           })
           .then(function (data) {
             data = data || {};
-            // Render only minimal, backend-provided, display-safe fields.
-            if (data.status === 'ready' && data.previewUrl) { ready(data.previewUrl); return; }
-            if (data.status === 'failed') { fail('Generation failed. Please try again or contact support.'); return; }
-            if (data.message) set(null, String(data.message));
+            var stage = data.snapshot && data.snapshot.currentStage;
+            if (stage === 'ready' || data.previewUrl) { ready(data.previewUrl); return; }
+            if (stage === 'failed') { fail(data.failureReason || 'Generation failed. Please try again or contact support.'); return; }
+            if (stage && STAGE_LABELS[stage]) set(STAGE_LABELS[stage], 'Hang tight — this usually takes a few minutes.');
             schedule(nextDelay());
           })
           .catch(function (err) { schedule(nextDelay(err && err.retryAfter)); });
