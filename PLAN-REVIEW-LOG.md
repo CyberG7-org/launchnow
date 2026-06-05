@@ -81,3 +81,11 @@ No genuinely new material blocker found. The remaining owner decisions are expli
 VERDICT: APPROVED
 ## Resolution
 Converged in 2 rounds (R1 REVISE -> R2 APPROVED). Plan cross-model approved. Implementation remains gated on Gate 0 (backend contract) + Gate 1 (backend live); owner final sign-off pending.
+
+## Build — pre-Gate-0 shell (2026-06-05)
+Implemented the backend-independent parts of the plan on claude/busy-curie-pjEii:
+- CTA repoint: ported the 19 exact `/intake` hrefs from Connect-intake-form across index/about/contact/pdpa/privacy/terms (0 old-host refs remain). No vercel.json proxy added (CORS approach).
+- intake.html (new): LaunchNow brief page cloned from contact.html chrome. PROVISIONAL fields (flagged — final set from Gate-0 IntakeForm.tsx), required PDPA consent, honeypot, gtag lead event. Submit handler: honeypot, native-required consent, checkoutUrl open-redirect allow-list, opaque-token redirect to /status — all gated behind BACKEND_READY=false until Gate 0/1.
+- status.html (new): noindex progress page. Polling scaffold — exponential backoff+jitter, hidden-tab pause, Retry-After, 10-min max duration, display-safe rendering — gated behind BACKEND_READY=false.
+- Verified: both pages serve HTTP 200 locally; tag balance clean (section 6/6, script 6/6 & 7/7, form 1/1 & 0/0); 0 leftover contact wiring in intake.
+TODO at Gate 0/1: pin exact fields + payload keys + status endpoint URL/response; flip BACKEND_READY; trim status.html trailing marketing sections; owner decisions (canonical host, Meta Pixel, Turnstile, Ads conversion label).
