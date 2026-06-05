@@ -8,5 +8,12 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/intake", "destination": "https://agency.cyberg7.com.sg/launchnow/intake" },
+    { "source": "/status/:jobId", "destination": "https://agency.cyberg7.com.sg/launchnow/status/:jobId" },
+    { "source": "/launchnow/:path*", "destination": "https://agency.cyberg7.com.sg/launchnow/:path*" },
+    { "source": "/api/:path*", "destination": "https://agency.cyberg7.com.sg/api/:path*" },
+    { "source": "/_next/:path*", "destination": "https://agency.cyberg7.com.sg/_next/:path*" }
   ]
 }
