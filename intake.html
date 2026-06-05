@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact CyberG7 Technologies — Get in touch to launch your professional website in 7 days for just S$288. WhatsApp, email, or visit our Singapore office.">
-  <meta name="keywords" content="contact CyberG7, Singapore web design contact, get website quote Singapore, affordable website enquiry, CyberG7 Technologies contact">
+  <meta name="description" content="Start your LaunchNow brief — tell us about your business and get a free, AI-generated website preview in minutes. Go live in 7 days for just S$288.">
+  <meta name="keywords" content="LaunchNow intake, free website preview Singapore, AI website builder Singapore, start website brief, CyberG7 Technologies">
   <meta name="author" content="CyberG7 Technologies">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0b10">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact Us | CyberG7 Technologies">
-  <meta property="og:description" content="Ready to launch your website? Get in touch with CyberG7 Technologies. WhatsApp, email, or fill out our contact form.">
-  <meta property="og:url" content="https://cyberg7.com/contact">
+  <meta property="og:title" content="Start Your Brief | LaunchNow by CyberG7 Technologies">
+  <meta property="og:description" content="Tell us about your business and get a free, AI-generated website preview in minutes. Go live in 7 days for just S$288.">
+  <meta property="og:url" content="https://intake-launchnow.cyberg7.com.sg/intake">
   <meta property="og:site_name" content="CyberG7 Technologies">
   <meta property="og:locale" content="en_SG">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Us | CyberG7 Technologies">
-  <meta name="twitter:description" content="Ready to launch your website? Get in touch with CyberG7 Technologies.">
+  <meta name="twitter:title" content="Start Your Brief | LaunchNow by CyberG7 Technologies">
+  <meta name="twitter:description" content="Tell us about your business and get a free, AI-generated website preview in minutes.">
 
-  <title>Contact Us | CyberG7 Technologies</title>
+  <title>Start Your Brief | LaunchNow by CyberG7 Technologies</title>
 
-  <link rel="canonical" href="https://cyberg7.com/contact">
+  <link rel="canonical" href="https://intake-launchnow.cyberg7.com.sg/intake">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194187704"></script>
@@ -1534,10 +1533,10 @@
     <div class="page-hero-scrim" aria-hidden="true"></div>
 
     <div class="container">
-      <div class="hero-badge"><span class="pulse"></span> We Are Ready to Help</div>
-      <h1><span class="gradient-text">Get In Touch</span></h1>
+      <div class="hero-badge"><span class="pulse"></span> Free Preview &middot; No Payment Upfront</div>
+      <h1><span class="gradient-text">Start Your Brief</span></h1>
       <p class="lead">
-        Ready to launch your professional website? Whether you have questions, need a quote, or want to get started right away &mdash; our Singapore-based team is here to help you every step of the way.
+        Tell us about your business and get a free, AI-generated website preview in minutes. Like what you see? Go live in 7 days for just S$288 &mdash; no lock-in, and nothing to pay to preview.
       </p>
     </div>
   </section>
@@ -1546,80 +1545,157 @@
 <section class="section-alt">
   <div class="container">
     <div class="reveal text-center">
-      <div class="section-label centered section-label-accent">Reach Out</div>
-      <h2>Send Us a Message</h2>
-      <p class="lead">Fill out the form below and our team will get back to you within one business day. Or reach us directly through any of our contact channels.</p>
+      <div class="section-label centered section-label-accent">Your Brief</div>
+      <h2>Tell Us About Your Business</h2>
+      <p class="lead">A quick brief is all we need to generate your website preview. The more you share, the better your first draft.</p>
     </div>
 
     <div class="contact-grid">
       <!-- Contact Form -->
       <div class="contact-form-card reveal reveal-delay-1">
-        <h3>Tell Us About Your Project</h3>
-        <p class="form-subtitle">We will get back to you within 24 hours.</p>
-        <form id="contactForm" novalidate>
+        <h3>Your Business Brief</h3>
+        <p class="form-subtitle">Takes about 2 minutes. Your preview is free — nothing to pay to see it.</p>
+        <!-- Fields + payload keys match the website-factory intakeSchema (POST /api/intake). -->
+        <form id="intakeForm" novalidate>
+          <!-- 01 · About -->
           <div class="form-group">
-            <label for="full_name">Full Name <span class="required">*</span></label>
-            <input type="text" id="full_name" name="full_name" class="form-input" placeholder="Full Name" required autocomplete="name">
+            <label for="brand">Business / Brand Name <span class="required">*</span></label>
+            <input type="text" id="brand" name="brand" class="form-input" placeholder="e.g. Strait Logistics" required autocomplete="organization">
           </div>
           <div class="form-group">
             <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="Email" required autocomplete="email">
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@business.com" required autocomplete="email">
+            <p class="form-note" style="margin-top:6px;">We'll send your preview link here.</p>
           </div>
           <div class="form-group">
-            <label for="phone">Phone <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone number" required autocomplete="tel">
+            <label for="industry">Industry <span class="required">*</span></label>
+            <input type="text" id="industry" name="industry" class="form-input" placeholder="Logistics &middot; F&amp;B &middot; Professional services" required>
           </div>
           <div class="form-group">
-            <label for="business_name">Business Name <span class="required">*</span></label>
-            <input type="text" id="business_name" name="business_name" class="form-input" placeholder="e.g. My Startup Pte Ltd" required autocomplete="organization">
+            <label for="businessType">Business Type</label>
+            <select id="businessType" name="businessType" class="form-input">
+              <option value="">Not sure / other</option>
+              <option value="ai_automation">AI Automation</option>
+              <option value="saas">SaaS</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="professional_services">Professional Services</option>
+              <option value="local_sme">Local Service Business</option>
+              <option value="healthcare">Healthcare &amp; Wellness</option>
+              <option value="finance">Finance &amp; Fintech</option>
+              <option value="education">Education &amp; Training</option>
+              <option value="real_estate">Real Estate</option>
+              <option value="hospitality">Hospitality &amp; F&amp;B</option>
+              <option value="legal">Legal</option>
+              <option value="construction">Construction &amp; Trades</option>
+              <option value="personal_brand">Personal Brand</option>
+              <option value="nonprofit">Nonprofit</option>
+            </select>
+          </div>
+          <!-- 02 · Positioning -->
+          <div class="form-group">
+            <label for="primaryGoal">Primary Goal</label>
+            <select id="primaryGoal" name="primaryGoal" class="form-input">
+              <option value="">Not sure yet</option>
+              <option value="lead_generation">Generate leads</option>
+              <option value="bookings">Get bookings</option>
+              <option value="sales">Drive sales</option>
+              <option value="product_demo">Book product demos</option>
+              <option value="waitlist">Build a waitlist</option>
+              <option value="investor_credibility">Investor credibility</option>
+              <option value="hiring">Hiring</option>
+              <option value="brand_repositioning">Brand repositioning</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="service">Service</label>
-            <textarea id="service" name="service" class="form-input" placeholder="Tell us about your business and what you need for your website..."></textarea>
+            <label for="goal">Your Goal, in One Line <span class="required">*</span></label>
+            <textarea id="goal" name="goal" class="form-input" rows="2" placeholder="e.g. Win mid-market shippers with a faster customs flow." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="audience">Audience <span class="required">*</span></label>
+            <input type="text" id="audience" name="audience" class="form-input" placeholder="e.g. Shipping managers at Singapore SMEs" required>
+          </div>
+          <!-- 03 · Competitors (at least one) -->
+          <div class="form-group">
+            <label for="competitor1">Competitor Website 1 <span class="required">*</span></label>
+            <input type="url" id="competitor1" name="competitor1" class="form-input" placeholder="https://example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="competitor2">Competitor Website 2</label>
+            <input type="url" id="competitor2" name="competitor2" class="form-input" placeholder="https://example.com (optional)">
+          </div>
+          <div class="form-group">
+            <label for="competitor3">Competitor Website 3</label>
+            <input type="url" id="competitor3" name="competitor3" class="form-input" placeholder="https://example.com (optional)">
+          </div>
+          <!-- 04 · The look (optional) -->
+          <div class="form-group">
+            <label for="vibe">Preferred Look</label>
+            <select id="vibe" name="vibe" class="form-input">
+              <option value="">Match a look to my industry</option>
+              <option value="professional">Cool &amp; Professional</option>
+              <option value="editorial">Warm &amp; Editorial</option>
+              <option value="minimal">Refined &amp; Minimal</option>
+              <option value="bold">Bold &amp; Energetic</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="primaryColor">Primary Colour</label>
+            <input type="text" id="primaryColor" name="primaryColor" class="form-input" placeholder="#6c5ce7 (optional)" pattern="#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})">
+          </div>
+          <div class="form-group">
+            <label for="accentColor">Accent Colour</label>
+            <input type="text" id="accentColor" name="accentColor" class="form-input" placeholder="#a29bfe (optional)" pattern="#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})">
+          </div>
+          <!-- PDPA consent — required before submit (PLAN.md security/privacy) -->
+          <div class="form-group" style="margin-top:4px;">
+            <label style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;cursor:pointer;">
+              <input type="checkbox" id="pdpa_consent" name="pdpa_consent" required style="margin-top:3px;flex:0 0 auto;width:18px;height:18px;accent-color:var(--accent);">
+              <span>I agree CyberG7 Technologies may use this brief to generate and host a website preview, and I accept the <a href="/privacy">Privacy Policy</a>, <a href="/terms">Terms</a> &amp; <a href="/pdpa">PDPA Notice</a>. <span class="required">*</span></span>
+            </label>
           </div>
           <!-- Honeypot: real users never see or fill this -->
           <div class="hp-field" aria-hidden="true">
             <label for="company_website">Company Website</label>
             <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
           </div>
-          <button type="submit" class="form-submit" id="contactSubmit">Go Live in 7 Days</button>
-          <div class="form-status" id="contactStatus" role="status" aria-live="polite"></div>
-          <p class="form-note">LaunchNow &middot; <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+          <button type="submit" class="form-submit" id="intakeSubmit">Build My Free Preview</button>
+          <div class="form-status" id="intakeStatus" role="status" aria-live="polite"></div>
+          <p class="form-note">Free preview &middot; No payment to see it &middot; <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
         </form>
       </div>
 
-      <!-- Contact Info Cards -->
+      <!-- What happens next -->
       <div class="contact-info-stack reveal reveal-delay-2">
         <div class="contact-info-card">
           <div class="contact-icon-wrap ci-purple">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a29bfe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a29bfe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
           </div>
           <div>
-            <div class="ci-label">Email</div>
-            <div class="ci-value"><a href="mailto:support@cyberg7.com.sg" class="ci-email-link" style="color:#63F888;text-decoration:underline;text-underline-offset:3px;font-weight:600;">support@cyberg7.com.sg <span style="font-size:0.85em;">&#8599;</span></a></div>
-            <div class="ci-desc">Send us a detailed enquiry and we will respond within 24 hours.</div>
+            <div class="ci-label">1 &middot; Submit your brief</div>
+            <div class="ci-value">Tell us about your business</div>
+            <div class="ci-desc">A couple of minutes is all it takes &mdash; no account, no payment.</div>
           </div>
         </div>
 
         <div class="contact-info-card">
           <div class="contact-icon-wrap ci-blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#74b9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#74b9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
           <div>
-            <div class="ci-label">Office Hours</div>
-            <div class="ci-value">Mon &ndash; Fri, 9am &ndash; 6pm SGT</div>
-            <div class="ci-desc">We typically respond to all enquiries within one business day.</div>
+            <div class="ci-label">2 &middot; We build your preview</div>
+            <div class="ci-value">A live draft in minutes</div>
+            <div class="ci-desc">Our engine generates a real website preview from your brief.</div>
           </div>
         </div>
 
         <div class="contact-info-card">
           <div class="contact-icon-wrap ci-location">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5DD3B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5DD3B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
           </div>
           <div>
-            <div class="ci-label">Location</div>
-            <div class="ci-value">Block 18 Boon Lay Way #04-118, Singapore, 609966</div>
-            <div class="ci-desc">100% Singapore-based team. ACRA registered and locally operated.</div>
+            <div class="ci-label">3 &middot; Review &amp; go live</div>
+            <div class="ci-value">Free to preview, S$288 to publish</div>
+            <div class="ci-desc">Love it? Publish and go live in 7 days. No lock-in.</div>
           </div>
         </div>
       </div>
@@ -1627,33 +1703,7 @@
   </div>
 </section>
 
-  <!-- ===== MAP PLACEHOLDER ===== -->
-  <section>
-    <div class="container">
-      <div class="map-card reveal">
-        <div class="map-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5DD3B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Singapore-Based Team</h3><br>
-<div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps?q=18%20Boon%20Lay%20Way%20Singapore&output=embed"
-          width="100%"
-          height="420"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div><br>
-        <p>We are a fully Singapore-based company, registered with ACRA and operating locally. Our team understands the unique needs of Singapore startups and SMEs because we are part of the same ecosystem.</p>
-        <div class="map-badges">
-          <div class="map-badge"><span class="dot-indicator"></span> ACRA Registered</div>
-          <div class="map-badge"><span class="dot-indicator"></span> Singapore Operations</div>
-          <div class="map-badge"><span class="dot-indicator"></span> Local Support Team</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- (office-location map omitted on the intake page) -->
 
   <!-- ===== FAQ MINI ===== -->
   <section class="section-alt">
@@ -1883,30 +1933,38 @@
     });
   </script>
 
-  <!-- ===== CONTACT FORM → n8n → Google Sheets ===== -->
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+  <!-- ===== INTAKE FORM → shared backend (POST /api/intake) ===== -->
   <script>
     (function () {
-      // Public-by-design webhook (called from the browser). Abuse-guarded by honeypot + CORS allow-list.
-      var WEBHOOK_URL = 'https://cyberg7support.app.n8n.cloud/webhook/launchnow-contact';
+      // Shared website-factory backend. Direct browser call (CORS) per PLAN.md.
+      // REQUIRES the backend to send Access-Control-Allow-Origin for this origin (Gate 1),
+      // OR a narrow /api proxy in vercel.json. Keep BACKEND_READY=false until that + the
+      // backend are live — otherwise the cross-origin POST is blocked / 404s.
+      var INTAKE_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake';
+      var BACKEND_READY = true;
+      // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
+      var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
-      var form = document.getElementById('contactForm');
+      var form = document.getElementById('intakeForm');
       if (!form) return;
-
-      var phoneInput = document.getElementById('phone');
-      var statusEl = document.getElementById('contactStatus');
-      var submitBtn = document.getElementById('contactSubmit');
-
-      var iti = window.intlTelInput(phoneInput, {
-        initialCountry: 'sg',
-        preferredCountries: ['sg', 'my'],
-        separateDialCode: true,
-        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
-      });
+      var statusEl = document.getElementById('intakeStatus');
+      var submitBtn = document.getElementById('intakeSubmit');
 
       function showStatus(type, msg) {
         statusEl.className = 'form-status show ' + type;
         statusEl.textContent = msg;
+      }
+      function val(name) {
+        var el = form.elements[name];
+        return el && typeof el.value === 'string' ? el.value.trim() : '';
+      }
+      // Only follow a backend checkoutUrl if it is https on an allow-listed host.
+      function safeCheckoutUrl(url) {
+        try {
+          var u = new URL(url);
+          if (u.protocol === 'https:' && CHECKOUT_ALLOWED_HOSTS.indexOf(u.host) !== -1) return u.href;
+        } catch (e) {}
+        return null;
       }
 
       form.addEventListener('submit', function (e) {
@@ -1914,54 +1972,71 @@
 
         // Honeypot filled = bot. Pretend success, send nothing.
         if (form.company_website && form.company_website.value) {
-          showStatus('success', 'Thank you! We will get back to you within 24 hours.');
+          showStatus('success', 'Thanks! We have received your brief.');
+          form.reset();
+          return;
+        }
+        // Native validation enforces required fields, url/email types, hex pattern, and consent.
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        // Payload keys match the website-factory intakeSchema exactly.
+        var competitorUrls = ['competitor1', 'competitor2', 'competitor3']
+          .map(val)
+          .filter(function (u) { return u.length > 0; });
+
+        var payload = {
+          brand: val('brand'),
+          email: val('email'),
+          industry: val('industry'),
+          competitorUrls: competitorUrls,
+          goal: val('goal'),
+          audience: val('audience'),
+          businessType: val('businessType') || undefined,
+          primaryGoal: val('primaryGoal') || undefined,
+          vibe: val('vibe') || undefined,
+          primaryColor: val('primaryColor') || undefined,
+          accentColor: val('accentColor') || undefined
+        };
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { form_name: 'launchnow_intake' });
+        }
+
+        if (!BACKEND_READY) {
+          // Shell mode: backend CORS + live deploy pending — don't fire a cross-origin call yet.
+          showStatus('success', 'Thanks! Instant website previews are going live shortly — we have recorded your interest and will email you the moment it is ready.');
           form.reset();
           return;
         }
 
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-        if (iti && typeof iti.isValidNumber === 'function' && !iti.isValidNumber()) {
-          showStatus('error', 'Please enter a valid phone number.');
-          phoneInput.focus();
-          return;
-        }
-
-        var payload = {
-          full_name: form.full_name.value.trim(),
-          email: form.email.value.trim(),
-          phone: (iti && iti.getNumber) ? iti.getNumber() : phoneInput.value.trim(),
-          business_name: form.business_name.value.trim(),
-          service: form.service.value.trim(),
-          company_website: ''
-        };
-
         var originalLabel = submitBtn.textContent;
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
+        submitBtn.textContent = 'Building your preview…';
         statusEl.className = 'form-status';
 
-        fetch(WEBHOOK_URL, {
+        fetch(INTAKE_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         })
           .then(function (res) {
-            if (!res.ok) throw new Error('Request failed: ' + res.status);
-            return res.json().catch(function () { return {}; });
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              return { ok: res.ok, data: data || {} };
+            });
           })
-          .then(function () {
-            showStatus('success', 'Thank you! Your message has been sent — we will get back to you within 24 hours.');
-            form.reset();
-            if (iti && iti.setCountry) iti.setCountry('sg');
-            if (typeof gtag === 'function') {
-              gtag('event', 'generate_lead', { form_name: 'launchnow_contact' });
+          .then(function (r) {
+            if (!r.ok || !r.data.jobId) {
+              showStatus('error', r.data.error || 'Something went wrong — please check your entries and try again.');
+              return;
             }
+            // A deposit, if ever returned, is post-preview; follow only an allow-listed checkoutUrl.
+            var checkout = r.data.checkoutUrl ? safeCheckoutUrl(r.data.checkoutUrl) : null;
+            if (checkout) { window.location.href = checkout; return; }
+            // Free-preview path → native status page with the opaque jobId (UUIDv4).
+            window.location.href = '/status?job=' + encodeURIComponent(r.data.jobId);
           })
           .catch(function (err) {
-            console.error('Contact form error:', err);
+            console.error('Intake error:', err);
             showStatus('error', 'Sorry, something went wrong. Please email support@cyberg7.com.sg or try again.');
           })
           .finally(function () {
