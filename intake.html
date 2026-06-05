@@ -1941,7 +1941,7 @@
       // OR a narrow /api proxy in vercel.json. Keep BACKEND_READY=false until that + the
       // backend are live — otherwise the cross-origin POST is blocked / 404s.
       var INTAKE_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake';
-      var BACKEND_READY = false;
+      var BACKEND_READY = true;
       // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
       var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
