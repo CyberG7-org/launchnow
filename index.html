@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Go Live in 7 Days — Just S$288 | CyberG7 Technologies">
   <meta property="og:description" content="Professional websites for Singapore startups and SMEs. Launch fast, scale smart. ACRA registered, SME Centre supported.">
-  <meta property="og:url" content="https://cyberg7.com">
-  <meta property="og:site_name" content="CyberG7 Technologies">
+  <meta property="og:url" content="https://launchnow.cyberg7.com.sg/">
+  <meta property="og:site_name" content="LaunchNow by CyberG7 Technologies">
   <meta property="og:locale" content="en_SG">
 
   <!-- Twitter Card -->
@@ -24,7 +24,7 @@
 
   <title>Go Live in 7 Days — Just S$288 | CyberG7 Technologies</title>
 
-  <link rel="canonical" href="https://cyberg7.com">
+  <link rel="canonical" href="https://launchnow.cyberg7.com.sg/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -42,31 +42,74 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "CyberG7 Technologies",
-    "description": "Professional website design for Singapore startups and SMEs. Go live in 7 days for just S$288.",
-    "url": "https://cyberg7.com",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Singapore"
-    },
-    "priceRange": "S$288 - S$500",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "SG"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "3000"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "Phase 1 Starter Website",
-      "price": "50",
-      "priceCurrency": "SGD",
-      "description": "Professional 5-page website, mobile responsive, basic SEO, live in 7 days"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://launchnow.cyberg7.com.sg/#website",
+        "url": "https://launchnow.cyberg7.com.sg/",
+        "name": "LaunchNow by CyberG7 Technologies",
+        "description": "Go live in 7 days for S$288 — professional starter websites for Singapore startups and SMEs, first year of hosting included.",
+        "inLanguage": "en-SG",
+        "publisher": { "@id": "https://launchnow.cyberg7.com.sg/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://launchnow.cyberg7.com.sg/#organization",
+        "name": "CyberG7 Technologies",
+        "url": "https://cyberg7.com.sg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://assets.cdn.filesafe.space/dBbcl4MTKFwtBEj38bKY/media/69ca31bc9556b462ea722de0.png"
+        },
+        "email": "cyberg7.llp@gmail.com",
+        "telephone": "+65-8671-1010",
+        "description": "CyberG7 Technologies delivers AI-powered automation, business transformation, and growth solutions for Singapore businesses. LaunchNow is its rapid 7-day website service.",
+        "areaServed": { "@type": "Country", "name": "Singapore" },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+65-8671-1010",
+            "contactType": "customer service",
+            "availableLanguage": ["English"],
+            "areaServed": "SG"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/cyberg7/",
+          "https://www.facebook.com/cyberg7technologies/",
+          "https://www.instagram.com/cyber.g7/",
+          "https://x.com/cyberg7digital"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://launchnow.cyberg7.com.sg/#webpage",
+        "url": "https://launchnow.cyberg7.com.sg/",
+        "name": "LaunchNow | Go Live in 7 Days for S$288 — Websites for Singapore SMEs",
+        "description": "LaunchNow builds and launches your professional Phase 1 starter website in 7 days for S$288, with the first year of hosting included.",
+        "inLanguage": "en-SG",
+        "isPartOf": { "@id": "https://launchnow.cyberg7.com.sg/#website" },
+        "about": { "@id": "https://launchnow.cyberg7.com.sg/#organization" },
+        "mainEntity": { "@id": "https://launchnow.cyberg7.com.sg/#service" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://launchnow.cyberg7.com.sg/#service",
+        "name": "LaunchNow — 7-Day Website Launch",
+        "serviceType": "Website design, build, and hosting",
+        "description": "A professional Phase 1 starter website designed, built, and launched in 7 days, including the first year of hosting. Helps Singapore startups and SMEs establish online credibility fast, without high upfront cost.",
+        "provider": { "@id": "https://launchnow.cyberg7.com.sg/#organization" },
+        "areaServed": { "@type": "Country", "name": "Singapore" },
+        "offers": {
+          "@type": "Offer",
+          "name": "Phase 1 Starter Website — 7-day launch, 1 year hosting included",
+          "price": "288",
+          "priceCurrency": "SGD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://launchnow.cyberg7.com.sg/"
+        }
+      }
+    ]
   }
   </script>
 

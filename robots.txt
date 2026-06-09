@@ -1,0 +1,39 @@
+# robots.txt for launchnow.cyberg7.com.sg
+# CyberG7 Technologies — LaunchNow (7-day website launch service)
+
+# Default: allow all search + AI crawlers
+User-agent: *
+Allow: /
+
+# Explicit AI-engine allow-list
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+Sitemap: https://launchnow.cyberg7.com.sg/sitemap.xml
