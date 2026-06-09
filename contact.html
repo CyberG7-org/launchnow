@@ -1914,8 +1914,7 @@
 
         // Honeypot filled = bot. Pretend success, send nothing.
         if (form.company_website && form.company_website.value) {
-          showStatus('success', 'Thank you! We will get back to you within 24 hours.');
-          form.reset();
+          window.location.href = '/thank-you';
           return;
         }
 
@@ -1953,11 +1952,24 @@
             return res.json().catch(function () { return {}; });
           })
           .then(function () {
-            showStatus('success', 'Thank you! Your message has been sent — we will get back to you within 24 hours.');
-            form.reset();
-            if (iti && iti.setCountry) iti.setCountry('sg');
+            // Fire the Google Ads lead conversion, then send the visitor to
+            // the dedicated /thank-you page. event_callback ensures the hit is
+            // sent before we navigate; the timeout is a fallback so the
+            // redirect still happens if gtag is blocked or slow to respond.
+            var redirected = false;
+            function goThankYou() {
+              if (redirected) return;
+              redirected = true;
+              window.location.href = '/thank-you';
+            }
             if (typeof gtag === 'function') {
-              gtag('event', 'generate_lead', { form_name: 'launchnow_contact' });
+              gtag('event', 'generate_lead', {
+                form_name: 'launchnow_contact',
+                event_callback: goThankYou
+              });
+              setTimeout(goThankYou, 1200);
+            } else {
+              goThankYou();
             }
           })
           .catch(function (err) {
