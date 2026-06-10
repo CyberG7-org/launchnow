@@ -42,26 +42,19 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact CyberG7 Technologies",
-    "description": "Get in touch with CyberG7 Technologies for professional website design in Singapore.",
-    "url": "https://cyberg7.com/contact",
-    "mainEntity": {
+    "@type": "WebPage",
+    "name": "Start Your Brief | LaunchNow by CyberG7 Technologies",
+    "description": "Tell us about your business and get a free, AI-generated website preview in minutes. Go live in 7 days for just S$288.",
+    "url": "https://intake-launchnow.cyberg7.com.sg/intake",
+    "publisher": {
       "@type": "Organization",
       "name": "CyberG7 Technologies",
-      "url": "https://cyberg7.com",
-      "email": "hello@cyberg7.com",
-      "telephone": "+65 XXXX XXXX",
+      "url": "https://intake-launchnow.cyberg7.com.sg",
+      "email": "support@cyberg7.com.sg",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "SG",
         "addressLocality": "Singapore"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
       }
     }
   }
@@ -824,11 +817,6 @@
     .form-input::placeholder {
       color: var(--text-muted);
     }
-    .form-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-glow), 0 0 20px rgba(108,92,231,0.1);
-      background: rgba(108,92,231,0.03);
-    }
     .form-input:hover:not(:focus) {
       border-color: rgba(255,255,255,0.1);
     }
@@ -1502,6 +1490,51 @@
       h1 { font-size: 2.2rem; }
       .map-badges { flex-direction: column; align-items: center; }
     }
+    /* ===== INTAKE FORM EXTRAS ===== */
+    /* Custom chevron for selects (native arrow clashes with the dark card) */
+    select.form-input {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23a0a3b8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+    /* PDPA consent — larger touch target + visible keyboard focus */
+    .consent-label {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;
+      cursor: pointer; padding: 10px 12px; margin: 0 -12px;
+      border-radius: 10px; transition: background 0.2s;
+    }
+    .consent-label:hover { background: rgba(255,255,255,0.03); }
+    .consent-label:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .consent-label input[type="checkbox"] {
+      flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px;
+      accent-color: var(--accent); cursor: pointer;
+    }
+    /* Submit spinner while the brief is being sent */
+    .form-submit.loading::after {
+      content: '';
+      position: absolute; top: 50%; right: 20px;
+      width: 18px; height: 18px; margin-top: -9px;
+      border: 2px solid rgba(255,255,255,0.35);
+      border-top-color: #fff; border-radius: 50%;
+      animation: btnSpin 0.7s linear infinite;
+    }
+    @keyframes btnSpin { to { transform: rotate(360deg); } }
+
+    /* Respect user motion preferences (WCAG 2.3.3) */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -1516,7 +1549,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="/about">About</a></li>
         <li><a href="/pdpa">PDPA</a></li>
-        <li><a href="/contact" class="active-link">Contact</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li><a href="/intake" class="shiny-cta shiny-cta-hero shiny-cta-nav"><span>Get Started</span></a></li>
       </ul>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -1648,8 +1681,8 @@
           </div>
           <!-- PDPA consent — required before submit (PLAN.md security/privacy) -->
           <div class="form-group" style="margin-top:4px;">
-            <label style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--text-secondary);line-height:1.5;cursor:pointer;">
-              <input type="checkbox" id="pdpa_consent" name="pdpa_consent" required style="margin-top:3px;flex:0 0 auto;width:18px;height:18px;accent-color:var(--accent);">
+            <label class="consent-label">
+              <input type="checkbox" id="pdpa_consent" name="pdpa_consent" required>
               <span>I agree CyberG7 Technologies may use this brief to generate and host a website preview, and I accept the <a href="/privacy">Privacy Policy</a>, <a href="/terms">Terms</a> &amp; <a href="/pdpa">PDPA Notice</a>. <span class="required">*</span></span>
             </label>
           </div>
@@ -1825,7 +1858,6 @@
           <a href="https://www.facebook.com/cyberg7technologies/" aria-label="Facebook">fb</a>
           <a href="https://www.instagram.com/cyber.g7/" aria-label="Instagram">ig</a>
           <a href="https://x.com/cyberg7digital" aria-label="Twitter/X">X</a>
-          </ul>
         </div>
       </div>
     </div>
@@ -1936,12 +1968,12 @@
   <!-- ===== INTAKE FORM → shared backend (POST /api/intake) ===== -->
   <script>
     (function () {
-      // Shared website-factory backend. Direct browser call (CORS) per PLAN.md.
-      // REQUIRES the backend to send Access-Control-Allow-Origin for this origin (Gate 1),
-      // OR a narrow /api proxy in vercel.json. Keep BACKEND_READY=false until that + the
-      // backend are live — otherwise the cross-origin POST is blocked / 404s.
+      // Shared website-factory backend. Direct browser call (CORS) — the backend
+      // allow-lists ONLY the production origin, so live submission is gated by hostname:
+      // real on production, friendly "coming online" message on previews/branches.
+      // No flag to flip on merge.
       var INTAKE_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake';
-      var BACKEND_READY = true;
+      var BACKEND_READY = (location.hostname === 'intake-launchnow.cyberg7.com.sg');
       // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
       var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
@@ -2011,6 +2043,7 @@
 
         var originalLabel = submitBtn.textContent;
         submitBtn.disabled = true;
+        submitBtn.classList.add('loading');
         submitBtn.textContent = 'Building your preview…';
         statusEl.className = 'form-status';
 
@@ -2041,6 +2074,7 @@
           })
           .finally(function () {
             submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
             submitBtn.textContent = originalLabel;
           });
       });
