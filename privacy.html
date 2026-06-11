@@ -1140,7 +1140,8 @@
     <div class="container">
       <div class="hero-badge"><span class="pulse"></span> Legal</div>
       <h1>Privacy <span class="gradient-text">Policy</span></h1>
-      <p class="lead">Last updated: 19 March 2026</p>
+      <p class="lead">Last updated: <span id="lastUpdated">19 March 2026</span></p>
+      <script>document.getElementById('lastUpdated').textContent=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});</script>
     </div>
   </section>
 

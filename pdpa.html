@@ -1183,7 +1183,8 @@
       <div class="hero-badge"><span class="pulse"></span> Singapore PDPA Compliant</div>
       <h1>Personal Data<br><span class="gradient-text">Protection Notice</span></h1>
       <p class="lead">In compliance with the Personal Data Protection Act 2012 (PDPA)</p>
-      <p class="hero-meta">Last updated: 16 March 2026</p>
+      <p class="hero-meta">Last updated: <span id="lastUpdated">16 March 2026</span></p>
+      <script>document.getElementById('lastUpdated').textContent=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});</script>
     </div>
   </section>
 
