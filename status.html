@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Generating Your Preview | LaunchNow by CyberG7 Technologies">
   <meta property="og:description" content="Your LaunchNow website preview is being generated.">
-  <meta property="og:url" content="https://intake-launchnow.cyberg7.com.sg/status">
+  <meta property="og:url" content="https://launchnow.cyberg7.com.sg/status">
   <meta property="og:site_name" content="CyberG7 Technologies">
   <meta property="og:locale" content="en_SG">
 
@@ -23,7 +23,7 @@
 
   <title>Generating Your Preview | LaunchNow by CyberG7 Technologies</title>
 
-  <link rel="canonical" href="https://intake-launchnow.cyberg7.com.sg/status">
+  <link rel="canonical" href="https://launchnow.cyberg7.com.sg/status">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -1618,7 +1618,10 @@
       // production origin, so live polling is gated by hostname: real on production,
       // friendly "coming online" message on previews/branches. No flag to flip on merge.
       var STATUS_BASE = 'https://agency.cyberg7.com.sg/api/status';
-      var BACKEND_READY = (location.hostname === 'intake-launchnow.cyberg7.com.sg');
+      // Both hosts: the project was re-domained to launchnow.cyberg7.com.sg (2026-06);
+      // the old intake-launchnow host stays accepted in case it returns as an alias.
+      var LIVE_HOSTS = ['launchnow.cyberg7.com.sg', 'intake-launchnow.cyberg7.com.sg'];
+      var BACKEND_READY = LIVE_HOSTS.indexOf(location.hostname) !== -1;
 
       var headline = document.getElementById('statusHeadline');
       var message  = document.getElementById('statusMessage');

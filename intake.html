@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Start Your Brief | LaunchNow by CyberG7 Technologies">
   <meta property="og:description" content="Tell us about your business and get a free, AI-generated website preview in minutes. Go live in 7 days for just S$288.">
-  <meta property="og:url" content="https://intake-launchnow.cyberg7.com.sg/intake">
+  <meta property="og:url" content="https://launchnow.cyberg7.com.sg/intake">
   <meta property="og:site_name" content="CyberG7 Technologies">
   <meta property="og:locale" content="en_SG">
 
@@ -24,7 +24,7 @@
 
   <title>Start Your Brief | LaunchNow by CyberG7 Technologies</title>
 
-  <link rel="canonical" href="https://intake-launchnow.cyberg7.com.sg/intake">
+  <link rel="canonical" href="https://launchnow.cyberg7.com.sg/intake">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -45,11 +45,11 @@
     "@type": "WebPage",
     "name": "Start Your Brief | LaunchNow by CyberG7 Technologies",
     "description": "Tell us about your business and get a free, AI-generated website preview in minutes. Go live in 7 days for just S$288.",
-    "url": "https://intake-launchnow.cyberg7.com.sg/intake",
+    "url": "https://launchnow.cyberg7.com.sg/intake",
     "publisher": {
       "@type": "Organization",
       "name": "CyberG7 Technologies",
-      "url": "https://intake-launchnow.cyberg7.com.sg",
+      "url": "https://launchnow.cyberg7.com.sg",
       "email": "support@cyberg7.com.sg",
       "address": {
         "@type": "PostalAddress",
@@ -2044,7 +2044,10 @@
       // real on production, friendly "coming online" message on previews/branches.
       // No flag to flip on merge.
       var INTAKE_ENDPOINT = 'https://agency.cyberg7.com.sg/api/intake';
-      var BACKEND_READY = (location.hostname === 'intake-launchnow.cyberg7.com.sg');
+      // Both hosts: the project was re-domained to launchnow.cyberg7.com.sg (2026-06);
+      // the old intake-launchnow host stays accepted in case it returns as an alias.
+      var LIVE_HOSTS = ['launchnow.cyberg7.com.sg', 'intake-launchnow.cyberg7.com.sg'];
+      var BACKEND_READY = LIVE_HOSTS.indexOf(location.hostname) !== -1;
       // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
       var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
