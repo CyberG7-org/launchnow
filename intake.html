@@ -1525,6 +1525,67 @@
     }
     @keyframes btnSpin { to { transform: rotate(360deg); } }
 
+    /* ===== DESIGN PASS 2 — premium form interactions ===== */
+    /* Numbered section dividers */
+    .form-section {
+      display: flex; align-items: center; gap: 10px;
+      margin: 28px 0 16px; padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .form-section:first-of-type { margin-top: 10px; padding-top: 0; border-top: none; }
+    .form-section .num { color: #22C55E; font-family: 'Space Mono', monospace; font-weight: 700; }
+    /* Focused field highlights its label */
+    .form-group > label { transition: color 0.25s; }
+    .form-group:focus-within > label { color: #22C55E; }
+    /* Inline validation */
+    .form-group.invalid .form-input {
+      border-color: #EF4444;
+      box-shadow: 0 0 0 3px rgba(239,68,68,0.15);
+    }
+    .field-msg { display: none; margin-top: 4px; margin-bottom: 8px; font-size: 0.78rem; color: #F87171; }
+    .form-group.invalid .field-msg { display: block; }
+    /* Brief completion progress */
+    .brief-progress { display: flex; align-items: center; gap: 12px; margin: 4px 0 18px; }
+    .brief-progress .bar {
+      flex: 1; height: 6px; border-radius: 3px;
+      background: rgba(255,255,255,0.07); overflow: hidden;
+    }
+    .brief-progress .bar i {
+      display: block; height: 100%; width: 0; border-radius: 3px;
+      background: linear-gradient(90deg, #16A34A, #22C55E);
+      transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .brief-progress .count {
+      font-family: 'Space Mono', monospace; font-size: 0.74rem;
+      color: var(--text-muted); white-space: nowrap;
+    }
+    /* Vibe picker cards */
+    .vibe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+    @media (max-width: 520px) { .vibe-grid { grid-template-columns: 1fr; } }
+    .vibe-card {
+      text-align: left; padding: 14px;
+      border-radius: 12px; cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      color: var(--text-secondary);
+      font-family: 'Outfit', sans-serif;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .vibe-card:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-2px); }
+    .vibe-card[aria-pressed="true"] {
+      border-color: #22C55E;
+      background: rgba(34,197,94,0.08);
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.12);
+    }
+    .vibe-card b { display: block; color: var(--text-primary); font-size: 0.92rem; font-weight: 600; }
+    .vibe-card small { display: block; margin-top: 3px; font-size: 0.75rem; color: var(--text-muted); }
+    .vibe-hint { margin-top: 8px; font-size: 0.75rem; color: var(--text-muted); }
+    /* Hero media entrance: drifts up into the sitewide resting transform (translateY(40px) scale(0.85)) */
+    .page-hero-media { transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    body:not(.hero-in) .page-hero-media { transform: translateY(70px) scale(0.85); }
+
     /* Respect user motion preferences (WCAG 2.3.3) */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1534,6 +1595,7 @@
         scroll-behavior: auto !important;
       }
       .reveal { opacity: 1 !important; transform: none !important; }
+      .page-hero-media { transition: none !important; transform: translateY(40px) scale(0.85) !important; }
     }
   </style>
 </head>
@@ -1588,9 +1650,14 @@
       <div class="contact-form-card reveal reveal-delay-1">
         <h3>Your Business Brief</h3>
         <p class="form-subtitle">Takes about 2 minutes. Your preview is free — nothing to pay to see it.</p>
+        <div class="brief-progress" aria-hidden="true">
+          <div class="bar"><i id="briefBar"></i></div>
+          <span class="count" id="briefCount">0 / 7</span>
+        </div>
         <!-- Fields + payload keys match the website-factory intakeSchema (POST /api/intake). -->
         <form id="intakeForm" novalidate>
           <!-- 01 · About -->
+          <div class="form-section"><span class="num">01</span> About your business</div>
           <div class="form-group">
             <label for="brand">Business / Brand Name <span class="required">*</span></label>
             <input type="text" id="brand" name="brand" class="form-input" placeholder="e.g. Strait Logistics" required autocomplete="organization">
@@ -1625,6 +1692,7 @@
             </select>
           </div>
           <!-- 02 · Positioning -->
+          <div class="form-section"><span class="num">02</span> What the site needs to do</div>
           <div class="form-group">
             <label for="primaryGoal">Primary Goal</label>
             <select id="primaryGoal" name="primaryGoal" class="form-input">
@@ -1648,6 +1716,7 @@
             <input type="text" id="audience" name="audience" class="form-input" placeholder="e.g. Shipping managers at Singapore SMEs" required>
           </div>
           <!-- 03 · Competitors (at least one) -->
+          <div class="form-section"><span class="num">03</span> Competitors we should study</div>
           <div class="form-group">
             <label for="competitor1">Competitor Website 1 <span class="required">*</span></label>
             <input type="url" id="competitor1" name="competitor1" class="form-input" placeholder="https://example.com" required>
@@ -1661,15 +1730,17 @@
             <input type="url" id="competitor3" name="competitor3" class="form-input" placeholder="https://example.com (optional)">
           </div>
           <!-- 04 · The look (optional) -->
+          <div class="form-section"><span class="num">04</span> The look <span style="opacity:.6;text-transform:none;letter-spacing:0;">(optional)</span></div>
           <div class="form-group">
-            <label for="vibe">Preferred Look</label>
-            <select id="vibe" name="vibe" class="form-input">
-              <option value="">Match a look to my industry</option>
-              <option value="professional">Cool &amp; Professional</option>
-              <option value="editorial">Warm &amp; Editorial</option>
-              <option value="minimal">Refined &amp; Minimal</option>
-              <option value="bold">Bold &amp; Energetic</option>
-            </select>
+            <label>Preferred Look</label>
+            <input type="hidden" id="vibe" name="vibe" value="">
+            <div class="vibe-grid" id="vibeGrid">
+              <button type="button" class="vibe-card" data-vibe="professional" aria-pressed="false"><b>Cool &amp; Professional</b><small>Clean, credible, corporate</small></button>
+              <button type="button" class="vibe-card" data-vibe="editorial" aria-pressed="false"><b>Warm &amp; Editorial</b><small>Serif, magazine, crafted</small></button>
+              <button type="button" class="vibe-card" data-vibe="minimal" aria-pressed="false"><b>Refined &amp; Minimal</b><small>Quiet, precise, spacious</small></button>
+              <button type="button" class="vibe-card" data-vibe="bold" aria-pressed="false"><b>Bold &amp; Energetic</b><small>High-contrast, vivid, modern</small></button>
+            </div>
+            <p class="vibe-hint">Optional — skip it and we'll match a look to your industry.</p>
           </div>
           <div class="form-group">
             <label for="primaryColor">Primary Colour</label>
@@ -1977,6 +2048,8 @@
       // Open-redirect guard: only ever follow a backend checkoutUrl on these hosts.
       var CHECKOUT_ALLOWED_HOSTS = ['checkout.stripe.com', 'agency.cyberg7.com.sg'];
 
+      document.body.classList.add('hero-in'); // settle the hero media in
+
       var form = document.getElementById('intakeForm');
       if (!form) return;
       var statusEl = document.getElementById('intakeStatus');
@@ -1998,6 +2071,63 @@
         } catch (e) {}
         return null;
       }
+
+      // --- Brief completion progress (the 7 required inputs) ---
+      var REQUIRED = ['brand', 'email', 'industry', 'goal', 'audience', 'competitor1', 'pdpa_consent'];
+      var briefBar = document.getElementById('briefBar');
+      var briefCount = document.getElementById('briefCount');
+      function updateProgress() {
+        var done = 0;
+        REQUIRED.forEach(function (n) {
+          var el = form.elements[n];
+          if (el && el.checkValidity()) done++;
+        });
+        if (briefBar) briefBar.style.width = (done / REQUIRED.length * 100) + '%';
+        if (briefCount) briefCount.textContent = done + ' / ' + REQUIRED.length;
+      }
+      form.addEventListener('input', updateProgress);
+      form.addEventListener('change', updateProgress);
+      updateProgress();
+
+      // --- Inline validation on blur (clears as you type) ---
+      Array.prototype.forEach.call(form.querySelectorAll('.form-input'), function (el) {
+        el.addEventListener('blur', function () {
+          var group = el.closest('.form-group');
+          if (!group) return;
+          if (!el.checkValidity()) {
+            group.classList.add('invalid');
+            var msg = group.querySelector('.field-msg');
+            if (!msg) {
+              msg = document.createElement('p');
+              msg.className = 'field-msg';
+              group.appendChild(msg);
+            }
+            msg.textContent = el.validationMessage;
+          } else {
+            group.classList.remove('invalid');
+          }
+        });
+        el.addEventListener('input', function () {
+          var group = el.closest('.form-group');
+          if (group && el.checkValidity()) group.classList.remove('invalid');
+        });
+      });
+
+      // --- Vibe picker cards → hidden input (payload key unchanged) ---
+      var vibeInput = document.getElementById('vibe');
+      var vibeCards = document.querySelectorAll('.vibe-card');
+      Array.prototype.forEach.call(vibeCards, function (btn) {
+        btn.addEventListener('click', function () {
+          var wasSelected = btn.getAttribute('aria-pressed') === 'true';
+          Array.prototype.forEach.call(vibeCards, function (b) { b.setAttribute('aria-pressed', 'false'); });
+          if (!wasSelected) {
+            btn.setAttribute('aria-pressed', 'true');
+            if (vibeInput) vibeInput.value = btn.getAttribute('data-vibe');
+          } else if (vibeInput) {
+            vibeInput.value = ''; // re-click deselects → "match my industry"
+          }
+        });
+      });
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();

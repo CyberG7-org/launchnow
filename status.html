@@ -1488,19 +1488,45 @@
     .status-spinner.ok::before { content: '✓'; }
     .status-spinner.err { background: rgba(239,68,68,0.12); color: #EF4444; }
     .status-spinner.err::before { content: '!'; }
-    .status-steps {
-      display: flex; gap: 6px; list-style: none;
-      max-width: 360px; margin: 18px auto 4px; padding: 0;
+    .stage-list {
+      list-style: none; max-width: 340px;
+      margin: 22px auto 6px; padding: 0;
+      text-align: left;
     }
-    .status-steps li {
-      flex: 1; height: 6px; border-radius: 3px;
-      background: rgba(255,255,255,0.08);
-      transition: background 0.4s;
+    .stage-list li {
+      display: flex; align-items: center; gap: 12px;
+      padding: 7px 0; font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.4s;
     }
-    .status-steps li.done { background: #22C55E; }
-    .status-steps li.active { background: var(--accent); animation: stepPulse 1.2s ease-in-out infinite; }
-    .status-steps li.err { background: #EF4444; }
+    .stage-list .dot {
+      flex: 0 0 auto; width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700; line-height: 1;
+      transition: border-color 0.4s, background 0.4s, box-shadow 0.4s;
+    }
+    .stage-list li.active { color: var(--text-primary); }
+    .stage-list li.active .dot {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+      animation: stepPulse 1.2s ease-in-out infinite;
+    }
+    .stage-list li.done { color: var(--text-secondary); }
+    .stage-list li.done .dot {
+      border-color: #22C55E; background: rgba(34,197,94,0.15); color: #22C55E;
+    }
+    .stage-list li.done .dot::before { content: '✓'; }
+    .stage-list li.err { color: var(--text-primary); }
+    .stage-list li.err .dot {
+      border-color: #EF4444; background: rgba(239,68,68,0.15); color: #EF4444;
+    }
+    .stage-list li.err .dot::before { content: '!'; }
     @keyframes stepPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+    /* Hero media entrance: drifts up into the sitewide resting transform (translateY(40px) scale(0.85)) */
+    .page-hero-media { transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    body:not(.hero-in) .page-hero-media { transform: translateY(70px) scale(0.85); }
     .status-swap { animation: fadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
 
     /* Respect user motion preferences (WCAG 2.3.3) */
@@ -1513,6 +1539,7 @@
       }
       .reveal { opacity: 1 !important; transform: none !important; }
       .status-spinner { border-top-color: rgba(255,255,255,0.08); border-left-color: var(--accent); }
+      .page-hero-media { transition: none !important; transform: translateY(40px) scale(0.85) !important; }
     }
   </style>
 </head>
@@ -1565,13 +1592,13 @@
     <div class="contact-form-card reveal reveal-delay-1" style="max-width:640px;margin:32px auto 0;text-align:center;">
       <div class="status-spinner" id="statusIcon" aria-hidden="true"></div>
       <h3 id="statusHeadline">Starting up&hellip;</h3>
-      <ol class="status-steps" id="statusSteps" aria-hidden="true">
-        <li data-stage="researching"></li>
-        <li data-stage="designing"></li>
-        <li data-stage="generating_assets"></li>
-        <li data-stage="building"></li>
-        <li data-stage="testing"></li>
-        <li data-stage="deploying"></li>
+      <ol class="stage-list" id="statusSteps">
+        <li data-stage="researching"><span class="dot" aria-hidden="true"></span>Researching your market</li>
+        <li data-stage="designing"><span class="dot" aria-hidden="true"></span>Designing your site</li>
+        <li data-stage="generating_assets"><span class="dot" aria-hidden="true"></span>Generating copy &amp; images</li>
+        <li data-stage="building"><span class="dot" aria-hidden="true"></span>Building your pages</li>
+        <li data-stage="testing"><span class="dot" aria-hidden="true"></span>Quality-checking</li>
+        <li data-stage="deploying"><span class="dot" aria-hidden="true"></span>Publishing your preview</li>
       </ol>
       <div class="form-status show" id="statusMessage" role="status" aria-live="polite" style="margin:16px 0;">Preparing your workspace&hellip;</div>
       <div id="statusActions" style="display:none;margin-top:20px;">
@@ -1585,6 +1612,8 @@
   <!-- ===== STATUS POLLING (native; polls shared backend GET /api/status/<jobId>) ===== -->
   <script>
     (function () {
+      document.body.classList.add('hero-in'); // settle the hero media in
+
       // <base>/<jobId>. Direct browser call (CORS) — the backend allow-lists ONLY the
       // production origin, so live polling is gated by hostname: real on production,
       // friendly "coming online" message on previews/branches. No flag to flip on merge.
