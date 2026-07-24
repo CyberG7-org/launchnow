@@ -32,6 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194187704"></script>
@@ -1943,6 +1944,7 @@
   </script>
 
   <!-- ===== INTAKE FORM → shared backend (POST /api/intake) ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
   <script>
     (function () {
       // Shared website-factory backend. Direct browser call (CORS) per PLAN.md.
@@ -1958,6 +1960,16 @@
       if (!form) return;
       var statusEl = document.getElementById('intakeStatus');
       var submitBtn = document.getElementById('intakeSubmit');
+
+      // International phone input → submits E.164 (e.g. +6581234567), which the
+      // backend uses to match the GHL contact by phone and set its preview link.
+      var phoneInput = document.getElementById('phone');
+      var iti = phoneInput ? window.intlTelInput(phoneInput, {
+        initialCountry: 'sg',
+        preferredCountries: ['sg', 'my'],
+        separateDialCode: true,
+        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
+      }) : null;
 
       function showStatus(type, msg) {
         statusEl.className = 'form-status show ' + type;
@@ -1987,6 +1999,11 @@
         }
         // Native validation enforces required fields, url/email types, hex pattern, and consent.
         if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (iti && typeof iti.isValidNumber === 'function' && !iti.isValidNumber()) {
+          showStatus('error', 'Please enter a valid phone number.');
+          if (phoneInput) phoneInput.focus();
+          return;
+        }
 
         // Payload keys match the website-factory intakeSchema exactly.
         var competitorUrls = ['competitor1', 'competitor2', 'competitor3']
@@ -1996,7 +2013,7 @@
         var payload = {
           brand: val('brand'),
           email: val('email'),
-          phone: val('phone'),
+          phone: (iti && iti.getNumber) ? iti.getNumber() : val('phone'),
           industry: val('industry'),
           competitorUrls: competitorUrls,
           goal: val('goal'),
